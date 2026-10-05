@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spanish 122 · Semana 3 · Capítulo 5.2 Imágenes (2) · gustar, tener que, ordinales, el tiempo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Space+Mono:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* SPAN 122 · Semana 3 · Capítulo 5.2 · Imágenes (2)
+   gustar-type verbs · tener que · ordinals · weather, seasons, months · naturaleza · una receta */
+
+:root{
+  --navy:#1B2E4F; --navy-light:#2E4977;
+  --terracotta:#C45D3A; --terracotta-light:#E0876A;
+  --gold:#D4A24C; --gold-light:#EBC373;
+  --sage:#6E8C5F; --sage-light:#9CB590;
+  --cream:#FBF7EE; --cream-dark:#F0E9D8;
+  --text:#1a1a1a; --text-light:#444; --text-hint:#666;
+  --soft-shadow:0 4px 16px rgba(27,46,79,0.08);
+  --tile-shadow:0 2px 8px rgba(27,46,79,0.06);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--cream);color:var(--text);line-height:1.55;font-size:16px;min-height:100vh;}
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--navy);color:#fff;padding:10px 16px;z-index:9999;text-decoration:none;}
+.skip-link:focus{left:8px;top:8px;}
+*:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px;}
+.app{max-width:1200px;margin:0 auto;padding:0 20px 64px;position:relative;}
+.app::before{content:'5';position:fixed;top:18px;right:24px;z-index:0;font-family:'Playfair Display',serif;font-size:9rem;font-weight:800;color:var(--navy);opacity:0.04;pointer-events:none;line-height:1;}
+
+.chap-head{margin-top:36px;padding:32px 36px;border-radius:18px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);color:#fff;box-shadow:var(--soft-shadow);position:relative;overflow:hidden;}
+.chap-head::after{content:'';position:absolute;right:-40px;bottom:-40px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(212,162,76,0.25),transparent 70%);}
+.header-badge{display:inline-block;font-family:'Space Mono',monospace;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;background:rgba(212,162,76,0.22);color:var(--gold-light);padding:5px 12px;border-radius:20px;margin-bottom:10px;}
+.header-title{display:block;font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;line-height:1.15;margin-bottom:6px;}
+.header-subtitle{display:block;font-family:'Space Mono',monospace;font-size:0.85rem;letter-spacing:0.1em;color:var(--gold-light);text-transform:uppercase;}
+
+.prog-bar{height:8px;background:var(--cream-dark);border-radius:4px;margin:6px 0 0;overflow:hidden;}
+.prog-fill{height:100%;background:linear-gradient(90deg,var(--terracotta),var(--gold));width:0%;transition:width 0.6s ease-out;}
+.completion-wrap{margin:22px 0 20px;}
+.completion-top{display:flex;align-items:center;gap:12px;}
+.completion-label{font-family:'Space Mono',monospace;font-size:0.66rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-hint);}
+.completion-score{margin-left:auto;font-family:'Space Mono',monospace;font-size:0.72rem;font-weight:700;letter-spacing:0.04em;color:var(--sage);background:rgba(110,140,95,0.14);padding:4px 12px;border-radius:20px;white-space:nowrap;}
+.completion-pct{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--terracotta);margin-left:14px;}
+.completion-legend{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
+.legend-pill{font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.04em;padding:4px 10px;border-radius:20px;background:var(--cream-dark);color:var(--text-light);border:1px solid transparent;cursor:pointer;transition:all 0.2s;}
+.legend-pill:hover{background:#e6d9c2;color:var(--navy);}
+.legend-pill.done{background:rgba(110,140,95,0.18);border-color:var(--sage);color:var(--sage);}
+
+.submit-bar{background:var(--cream-dark);border-radius:12px;padding:14px 18px;margin-bottom:22px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.submit-bar label{font-family:'Space Mono',monospace;font-size:0.66rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-light);}
+#studentName{flex:1;min-width:210px;border:2px solid #e2d5bd;border-radius:8px;background:#fff;padding:9px 13px;font-family:inherit;font-size:0.94rem;color:var(--navy);}
+#studentName:focus{outline:none;border-color:var(--gold);}
+.btn-download{background:var(--terracotta);color:#fff;border:none;border-radius:8px;padding:10px 20px;cursor:pointer;font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;transition:background 0.2s,transform 0.2s;}
+.btn-download:hover{background:var(--terracotta-light);transform:translateY(-1px);}
+.submit-hint{width:100%;font-family:'Space Mono',monospace;font-size:0.62rem;color:var(--text-hint);letter-spacing:0.04em;}
+
+.quiz-item{background:var(--cream);border-radius:12px;padding:16px 18px;margin-bottom:14px;border-left:4px solid var(--sage);}
+.quiz-item.correct{background:#eef6ea;border-left-color:var(--sage);}
+.quiz-item.wrong{background:#fbeceb;border-left-color:var(--terracotta);}
+.quiz-q{font-size:0.95rem;font-weight:700;color:var(--navy);margin-bottom:2px;}
+.quiz-q .qnum{font-family:'Space Mono',monospace;font-size:0.72rem;color:var(--text-hint);font-weight:400;margin-right:6px;}
+.quiz-gloss{font-size:0.8rem;color:var(--text-hint);font-style:italic;margin-bottom:12px;}
+.quiz-options{display:grid;gap:7px;}
+.quiz-opt{display:flex;align-items:flex-start;gap:10px;background:#fff;border:2px solid var(--cream-dark);border-radius:9px;padding:9px 13px;font-size:0.88rem;cursor:pointer;text-align:left;font-family:inherit;color:var(--text);width:100%;transition:border-color 0.2s,background 0.2s;}
+.quiz-opt:hover{border-color:var(--sage-light);background:#fbfaf6;}
+.quiz-opt.selected{border-color:var(--navy);background:#f3f5fa;}
+.quiz-opt.is-correct{border-color:var(--sage);background:#eef6ea;}
+.quiz-opt.is-wrong{border-color:var(--terracotta);background:#fbeceb;}
+.quiz-opt .letter{font-family:'Space Mono',monospace;font-size:0.7rem;color:var(--text-hint);flex-shrink:0;margin-top:2px;}
+.quiz-explain{font-size:0.84rem;margin-top:10px;padding:10px 13px;border-radius:8px;background:#fff;border-left:3px solid var(--gold);display:none;}
+.quiz-explain.show{display:block;}
+.res-check{margin-top:12px;padding-top:12px;border-top:1px dashed var(--cream-dark);}
+.res-check .rc-label{font-family:'Space Mono',monospace;font-size:0.57rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--sage);margin-bottom:6px;}
+.res-check .rc-q{font-size:0.83rem;margin-bottom:4px;color:var(--text);}
+.res-check .rc-gloss{font-size:0.73rem;color:var(--text-hint);font-style:italic;margin-bottom:8px;}
+.res-check .quiz-opt{font-size:0.8rem;padding:7px 11px;}
+
+.task-input{width:100%;border:none;border-bottom:2px solid var(--cream-dark);background:transparent;font-family:inherit;font-size:0.92rem;color:var(--navy);padding:5px 6px;}
+.task-input:focus{outline:none;border-bottom-color:var(--gold);}
+.task-fb{font-family:'Space Mono',monospace;font-size:0.66rem;margin-top:6px;display:none;}
+.task-fb.show{display:block;}
+.task-fb.ok{color:var(--sage);}
+.task-fb.ng{color:var(--terracotta);}
+.task-row{display:flex;align-items:center;gap:10px;background:var(--cream);border-radius:9px;padding:11px 14px;margin-bottom:9px;flex-wrap:wrap;}
+.task-row .rnum{font-family:'Space Mono',monospace;font-size:0.7rem;color:var(--text-hint);min-width:20px;}
+.task-tag{font-family:'Space Mono',monospace;font-size:0.6rem;background:var(--cream-dark);color:var(--navy);padding:3px 9px;border-radius:4px;white-space:nowrap;}
+
+.nav{display:flex;gap:4px;flex-wrap:wrap;background:#fff;padding:6px;border-radius:14px;box-shadow:var(--tile-shadow);margin-bottom:24px;}
+.tab{flex:1 1 auto;min-width:110px;padding:12px 14px;background:transparent;border:none;border-radius:10px;font-family:'Source Sans 3',sans-serif;font-size:0.9rem;font-weight:600;color:var(--text-light);cursor:pointer;transition:all 0.18s ease;min-height:44px;}
+.tab:hover{background:var(--cream-dark);color:var(--navy);}
+.tab.active{background:var(--navy);color:#fff;box-shadow:0 2px 6px rgba(27,46,79,0.25);}
+
+.sec{display:none;animation:fadein 0.3s ease;}
+.sec.active{display:block;}
+@keyframes fadein{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+.sec-title{font-family:'Playfair Display',serif;font-size:1.65rem;font-weight:700;color:var(--navy);margin-bottom:6px;}
+.sec-sub{font-family:'Space Mono',monospace;font-size:0.78rem;letter-spacing:0.12em;color:var(--terracotta);text-transform:uppercase;margin-bottom:22px;}
+
+.week-hero{background:#fff;padding:26px 30px;border-radius:14px;margin-bottom:24px;box-shadow:var(--tile-shadow);border-left:5px solid var(--terracotta);}
+.week-hero h1{font-family:'Playfair Display',serif;font-size:1.55rem;color:var(--navy);margin-bottom:8px;}
+.week-hero p{font-size:0.97rem;color:var(--text-light);margin-bottom:14px;}
+.topic-chips{display:flex;flex-wrap:wrap;gap:7px;}
+.chip{display:inline-block;padding:5px 11px;background:var(--cream-dark);color:var(--navy);border-radius:14px;font-size:0.78rem;font-weight:600;font-family:'Space Mono',monospace;letter-spacing:0.02em;}
+
+.ch-intro{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);color:#fff;padding:24px 28px;border-radius:14px;margin-bottom:22px;box-shadow:var(--soft-shadow);position:relative;overflow:hidden;}
+.ch-intro::before{content:'';position:absolute;left:-30px;top:-30px;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle,rgba(196,93,58,0.25),transparent 70%);}
+.ch-intro .label{position:relative;font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:6px;}
+.ch-intro h2{position:relative;font-family:'Playfair Display',serif;font-size:1.5rem;margin-bottom:10px;color:#fff;}
+.ch-intro p{position:relative;font-size:0.95rem;line-height:1.6;color:rgba(255,255,255,0.95);}
+
+.card{background:#fff;padding:22px 26px;border-radius:14px;margin-bottom:18px;box-shadow:var(--tile-shadow);}
+.card-title{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:14px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.card-title .pill{font-family:'Space Mono',monospace;font-size:0.65rem;background:var(--gold);color:#fff;padding:3px 9px;border-radius:12px;letter-spacing:0.1em;}
+
+.obj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;}
+.obj{background:var(--cream);padding:14px 16px;border-radius:10px;border-left:3px solid var(--sage);display:flex;gap:11px;align-items:flex-start;}
+.obj-num{flex-shrink:0;width:24px;height:24px;border-radius:50%;background:var(--sage);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Space Mono',monospace;font-size:0.72rem;font-weight:700;}
+.obj-text{font-size:0.93rem;color:var(--text);line-height:1.45;}
+
+.res-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;}
+.res-card{background:#fff;padding:16px 18px;border-radius:12px;border-top:3px solid var(--gold);box-shadow:var(--tile-shadow);}
+.res-card-day{font-family:'Space Mono',monospace;font-size:0.7rem;color:var(--terracotta);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:5px;}
+.res-card-topic{font-family:'Playfair Display',serif;font-weight:700;color:var(--navy);font-size:1.02rem;margin-bottom:10px;}
+.res-card a{display:block;font-size:0.84rem;color:var(--navy-light);text-decoration:none;padding:6px 0;border-bottom:1px solid var(--cream-dark);word-break:break-word;}
+.res-card a:last-child{border-bottom:none;}
+.res-card a:hover{color:var(--terracotta);}
+.res-card a::before{content:'→ ';color:var(--gold);font-weight:700;}
+
+.vocab-hint{text-align:center;font-size:0.82rem;color:var(--text-hint);font-style:italic;margin-bottom:14px;}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:11px;}
+.vocab-card{perspective:1000px;height:118px;cursor:pointer;}
+.vocab-card-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+.vocab-card.flipped .vocab-card-inner{transform:rotateY(180deg);}
+.vocab-front,.vocab-back{position:absolute;width:100%;height:100%;-webkit-backface-visibility:hidden;backface-visibility:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:14px;border-radius:11px;text-align:center;box-shadow:var(--tile-shadow);}
+.vocab-front{background:#fff;border:2px solid var(--cream-dark);font-family:'Playfair Display',serif;font-weight:700;color:var(--navy);font-size:0.98rem;}
+.vocab-front small{display:block;font-family:'Space Mono',monospace;font-size:0.62rem;color:var(--text-hint);font-weight:400;margin-top:5px;letter-spacing:0.04em;}
+.vocab-back{background:linear-gradient(135deg,var(--terracotta),var(--terracotta-light));color:#fff;transform:rotateY(180deg);font-size:0.92rem;font-weight:600;}
+.vocab-ex{display:block;font-size:0.74rem;font-weight:400;font-style:italic;margin-top:6px;opacity:0.92;padding:0 18px;}
+.vocab-sound{position:absolute;top:6px;right:9px;font-size:0.75rem;opacity:0.55;}
+.vocab-replay{position:absolute;bottom:6px;right:8px;background:rgba(255,255,255,0.22);border:none;border-radius:50%;width:30px;height:30px;font-size:0.85rem;cursor:pointer;color:#fff;line-height:30px;padding:0;}
+.vocab-replay:hover,.vocab-replay:focus-visible{background:rgba(255,255,255,0.4);outline:2px solid #fff;}
+.vocab-card:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:12px;}
+.vocab-card.conn-card .vocab-front{border-color:var(--sage-light);color:var(--sage);}
+.vocab-card.conn-card .vocab-back{background:linear-gradient(135deg,var(--sage),#5A7350);}
+
+.gbox{background:#fff;padding:24px 28px;border-radius:14px;margin-bottom:22px;box-shadow:var(--tile-shadow);border-top:4px solid var(--terracotta);}
+.gbox.alt{border-top-color:var(--sage);}
+.gbox.alt2{border-top-color:var(--gold);}
+.gbox h3{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--navy);margin-bottom:6px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.gbox h3 .num{font-family:'Space Mono',monospace;font-size:0.7rem;background:var(--terracotta);color:#fff;padding:4px 10px;border-radius:11px;letter-spacing:0.1em;}
+.gbox.alt h3 .num{background:var(--sage);}
+.gbox.alt2 h3 .num{background:var(--gold);color:var(--navy);}
+.gbox .sub{font-size:0.9rem;color:var(--text-hint);margin-bottom:16px;font-style:italic;}
+
+.conj-table{width:100%;border-collapse:collapse;margin:14px 0;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 1px 4px rgba(27,46,79,0.05);}
+.conj-table th,.conj-table td{padding:9px 13px;text-align:left;font-size:0.9rem;border-bottom:1px solid var(--cream-dark);}
+.conj-table th{background:var(--navy);color:#fff;font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.06em;text-transform:uppercase;font-weight:700;}
+.conj-table td .pn{color:var(--text-hint);}
+.conj-table td .fm{color:var(--terracotta);font-weight:700;font-style:italic;}
+.conj-table .accent{color:var(--terracotta);font-weight:700;}
+.conj-table tr:last-child td{border-bottom:none;}
+
+.three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:14px 0;}
+@media(max-width:740px){.three-col{grid-template-columns:1fr;}}
+.col-card{background:var(--cream);padding:16px 18px;border-radius:10px;border-top:4px solid var(--terracotta);}
+.col-card.gd{border-top-color:var(--gold);}
+.col-card.sg{border-top-color:var(--sage);}
+.col-card h4{font-family:'Playfair Display',serif;font-size:1.12rem;color:var(--navy);margin-bottom:4px;}
+.col-card .meaning{font-family:'Space Mono',monospace;font-size:0.68rem;color:var(--text-hint);letter-spacing:0.05em;text-transform:uppercase;margin-bottom:10px;}
+.col-card .ex{font-style:italic;font-size:0.85rem;color:var(--text);background:#fff;padding:7px 10px;border-radius:6px;margin-bottom:5px;}
+.col-card .ex strong{color:var(--terracotta);font-style:normal;}
+.col-card.gd .ex strong{color:#A07A2D;}
+.col-card.sg .ex strong{color:var(--sage);}
+
+.ex-box{background:var(--cream);border-left:3px solid var(--sage);padding:12px 16px;border-radius:8px;margin:14px 0;}
+.ex-box p{font-size:0.9rem;color:var(--text);margin:4px 0;}
+.ex-box em{color:var(--text-hint);font-style:italic;}
+.ojo{background:#FFF6F0;border-left:4px solid var(--terracotta);padding:14px 18px;border-radius:8px;margin:16px 0;}
+.ojo-title{font-family:'Space Mono',monospace;font-size:0.72rem;color:var(--terracotta);letter-spacing:0.12em;text-transform:uppercase;font-weight:700;margin-bottom:6px;}
+.ojo p{font-size:0.92rem;color:var(--text);line-height:1.55;}
+.ojo em{color:var(--terracotta);font-style:italic;font-weight:600;}
+
+.ex-item{display:flex;align-items:baseline;gap:10px;padding:11px 0;border-bottom:1px solid var(--cream-dark);font-size:0.97rem;}
+.ex-item:last-of-type{border-bottom:none;}
+.ex-num{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--cream);color:var(--navy);display:inline-flex;align-items:center;justify-content:center;font-family:'Space Mono',monospace;font-size:0.78rem;font-weight:700;}
+.ex-text{flex:1;line-height:1.9;color:var(--text);}
+.ex-hint{font-family:'Space Mono',monospace;font-size:0.78rem;color:var(--terracotta);margin-left:4px;}
+.blk{display:inline-block;width:120px;padding:6px 10px;border:2px solid var(--cream-dark);border-radius:6px;font-family:'Source Sans 3',sans-serif;font-size:0.95rem;color:var(--navy);background:#fff;outline:none;transition:border-color 0.15s;}
+.blk.wide{width:170px;}
+.blk:focus{border-color:var(--gold);}
+.blk.ok{border-color:var(--sage);background:#F4F8F0;color:#3F5C32;}
+.blk.ng{border-color:var(--terracotta);background:#FFF0EA;color:#8E3A1F;}
+
+.chk-btn,.rst-btn,.toggle-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border:none;border-radius:8px;font-family:'Source Sans 3',sans-serif;font-size:0.92rem;font-weight:700;cursor:pointer;transition:all 0.15s;min-height:42px;margin-top:14px;}
+.chk-btn{background:var(--navy);color:#fff;}
+.chk-btn:hover{background:var(--navy-light);}
+.rst-btn{background:#fff;color:var(--navy);border:2px solid var(--cream-dark);margin-left:6px;}
+.rst-btn:hover{border-color:var(--navy);}
+.toggle-btn{background:var(--gold);color:var(--navy);margin-left:6px;}
+.toggle-btn:hover{background:var(--gold-light);}
+.res-msg{margin-top:12px;font-size:0.93rem;font-weight:700;min-height:22px;}
+.res-msg.ok{color:#3F5C32;}
+.res-msg.ng{color:#8E3A1F;}
+
+.word-bank{background:var(--cream);padding:11px 14px;border-radius:8px;margin-bottom:14px;font-size:0.88rem;}
+.word-bank-label{font-family:'Space Mono',monospace;font-size:0.7rem;color:var(--text-hint);letter-spacing:0.1em;text-transform:uppercase;display:block;margin-bottom:4px;}
+.word-bank-words span{display:inline-block;background:#fff;padding:3px 9px;border-radius:11px;margin:2px 3px;font-size:0.84rem;border:1px solid var(--cream-dark);color:var(--navy);font-weight:700;}
+
+/* Matching */
+.match-cols{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.match-col-label{font-family:'Space Mono',monospace;font-size:0.62rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-hint);margin-bottom:6px;}
+.mi{padding:11px 13px;border:2px solid var(--cream-dark);border-radius:9px;cursor:pointer;font-size:0.86rem;background:#fff;transition:all 0.12s;line-height:1.4;margin-bottom:7px;color:var(--text);}
+.mi:hover{border-color:var(--sage-light);}
+.mi.sel{border-color:var(--navy);background:#f3f5fa;color:var(--navy);}
+.mi.done{border-color:var(--sage);background:#eef6ea;color:#3F5C32;pointer-events:none;opacity:0.75;}
+.mi.bad{border-color:var(--terracotta);background:#fbeceb;}
+
+/* Conjugation game */
+.game-wrap{background:var(--cream);border-radius:14px;padding:22px;text-align:center;}
+.game-scorebar{display:flex;justify-content:center;gap:22px;margin-bottom:16px;font-family:'Space Mono',monospace;font-size:0.72rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-hint);}
+.game-scorebar b{display:block;font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--terracotta);margin-top:2px;}
+.game-prompt{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--navy);margin:10px 0 4px;}
+.game-sub{font-size:0.85rem;color:var(--text-hint);font-style:italic;margin-bottom:18px;}
+.game-opts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:560px;margin:0 auto;}
+@media(max-width:520px){.game-opts{grid-template-columns:1fr;}}
+.game-opt{background:#fff;border:2px solid var(--cream-dark);border-radius:10px;padding:14px 10px;font-family:'Source Sans 3',sans-serif;font-size:1rem;font-weight:700;color:var(--navy);cursor:pointer;transition:all 0.12s;}
+.game-opt:hover{border-color:var(--sage-light);transform:translateY(-2px);}
+.game-opt.is-correct{border-color:var(--sage);background:#eef6ea;color:#3F5C32;}
+.game-opt.is-wrong{border-color:var(--terracotta);background:#fbeceb;color:#8E3A1F;}
+.game-feedback{min-height:22px;margin-top:14px;font-weight:700;font-size:0.95rem;}
+.game-feedback.ok{color:#3F5C32;}
+.game-feedback.ng{color:#8E3A1F;}
+.game-done{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--navy);}
+
+.cult-card{background:linear-gradient(135deg,var(--sage) 0%,#5A7350 100%);color:#fff;padding:24px 28px;border-radius:14px;margin-bottom:18px;box-shadow:var(--soft-shadow);}
+.cult-card .label{font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:6px;}
+.cult-card h3{font-family:'Playfair Display',serif;font-size:1.4rem;margin-bottom:12px;color:#fff;}
+.cult-card p{font-size:0.95rem;line-height:1.65;color:rgba(255,255,255,0.95);}
+.cult-card .fact-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
+.cult-card .fact-pills span{background:rgba(255,255,255,0.18);padding:5px 11px;border-radius:14px;font-size:0.82rem;font-weight:600;}
+
+.footer{margin-top:36px;padding:20px;text-align:center;font-family:'Space Mono',monospace;font-size:0.76rem;color:var(--text-hint);letter-spacing:0.05em;}
+
+@media(max-width:600px){
+  .chap-head{padding:24px 22px;}
+  .header-title{font-size:1.7rem;}
+  .gbox,.card,.cult-card,.ch-intro{padding:18px 20px;}
+  .three-col{grid-template-columns:1fr;}
+  .ex-item{flex-wrap:wrap;}
+}
+
+/* ── Semana 2 additions ── */
+.plan-card{background:#fff;padding:16px 18px;border-radius:12px;border-top:3px solid var(--gold);box-shadow:var(--tile-shadow);}
+.plan-card.inclass{border-top-color:var(--terracotta);}
+.plan-card.practice{border-top-color:var(--sage);}
+.plan-card ul{list-style:none;margin:0;padding:0;}
+.plan-card li{font-size:0.86rem;color:var(--text);padding:6px 0;border-bottom:1px solid var(--cream-dark);}
+.plan-card li:last-child{border-bottom:none;}
+.plan-card li::before{content:'→ ';color:var(--gold);font-weight:700;}
+
+.icon-speaker{width:14px;height:14px;display:inline-block;vertical-align:middle;}
+.vocab-sound{display:flex;align-items:center;}
+.vocab-replay{display:flex;align-items:center;justify-content:center;}
+.vocab-replay svg{width:14px;height:14px;}
+.vocab-card.sport-card .vocab-front{border-color:var(--gold-light);color:#8A6420;}
+.vocab-card.sport-card .vocab-back{background:linear-gradient(135deg,var(--gold),#B8862F);}
+.vocab-card.time-card .vocab-front{border-color:#b9c4d8;color:var(--navy-light);}
+.vocab-card.time-card .vocab-back{background:linear-gradient(135deg,var(--navy-light),var(--navy));}
+.audio-note{text-align:center;font-size:0.75rem;color:var(--text-hint);margin:-6px 0 16px;}
+
+/* The boot */
+.boot-wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;align-items:center;margin:14px 0;}
+@media(max-width:740px){.boot-wrap{grid-template-columns:1fr;}}
+.boot{display:grid;grid-template-columns:1fr 1fr;gap:6px;max-width:360px;}
+.boot div{padding:12px 10px;border-radius:8px;text-align:center;font-size:0.95rem;}
+.boot .in{background:var(--terracotta);color:#fff;font-weight:700;}
+.boot .out{background:#fff;border:2px dashed var(--cream-dark);color:var(--text-light);}
+.boot small{display:block;font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.04em;opacity:0.85;font-weight:400;margin-bottom:2px;}
+.boot-legend{font-size:0.9rem;color:var(--text-light);line-height:1.6;}
+.boot-legend p{margin-bottom:8px;}
+.swatch{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:middle;margin-right:6px;}
+
+.chg{color:var(--terracotta);font-weight:700;}
+.conj-table td.nochg{color:var(--text);font-weight:400;font-style:normal;background:#FBFAF6;}
+
+.rule-list{counter-reset:rule;display:grid;gap:10px;margin:14px 0;}
+.rule{background:var(--cream);border-radius:10px;padding:13px 16px 13px 52px;position:relative;}
+.rule::before{counter-increment:rule;content:counter(rule);position:absolute;left:14px;top:13px;width:26px;height:26px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Space Mono',monospace;font-size:0.75rem;font-weight:700;}
+.rule h4{font-family:'Playfair Display',serif;font-size:1.02rem;color:var(--navy);margin-bottom:4px;}
+.rule p{font-size:0.9rem;color:var(--text);margin:2px 0;}
+.rule .ok{color:#3F5C32;font-weight:700;}
+.rule .no{color:#8E3A1F;text-decoration:line-through;}
+
+/* Tarea: Mi rutina deportiva */
+.task-area{width:100%;min-height:210px;border:2px solid var(--cream-dark);border-radius:10px;padding:14px 16px;font-family:inherit;font-size:0.97rem;line-height:1.6;color:var(--navy);background:#fff;resize:vertical;}
+.task-area:focus{outline:none;border-color:var(--gold);}
+.wc{font-family:'Space Mono',monospace;font-size:0.7rem;color:var(--text-hint);margin-top:6px;text-align:right;}
+.checklist{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:8px;margin:14px 0 4px;padding:0;}
+.checklist li{background:var(--cream);border-radius:9px;padding:10px 12px 10px 38px;font-size:0.86rem;position:relative;color:var(--text-light);border:2px solid transparent;}
+.checklist li::before{content:'';position:absolute;left:12px;top:11px;width:16px;height:16px;border-radius:4px;border:2px solid #cdbf9f;background:#fff;}
+.checklist li.met{border-color:var(--sage);background:#eef6ea;color:#3F5C32;}
+.checklist li.met::before{background:var(--sage);border-color:var(--sage);}
+.checklist li.met::after{content:'';position:absolute;left:17px;top:13px;width:5px;height:9px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg);}
+.checklist li b{color:var(--navy);}
+.model{background:#fff;border:1px dashed var(--gold);border-radius:10px;padding:14px 18px;margin:14px 0;font-size:0.92rem;line-height:1.7;}
+.model .ml{font-family:'Space Mono',monospace;font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:#A07A2D;margin-bottom:6px;display:block;}
+.model mark{background:rgba(212,162,76,0.25);padding:0 2px;border-radius:3px;color:inherit;}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:12px 0;}
+.step{background:var(--cream);border-radius:10px;padding:12px 14px;font-size:0.88rem;}
+.step b{display:block;font-family:'Space Mono',monospace;font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--terracotta);margin-bottom:4px;}
+
+
+/* ── Semana 3 additions ── */
+.vocab-card.nat-card .vocab-front{border-color:var(--sage-light);color:#4d6a40;}
+.vocab-card.nat-card .vocab-back{background:linear-gradient(135deg,#4d6a40,var(--sage));}
+.formula{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0;}
+.formula span{background:var(--cream);border-radius:9px;padding:9px 13px;font-size:0.92rem;font-weight:700;color:var(--navy);}
+.formula span small{display:block;font-family:'Space Mono',monospace;font-size:0.58rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-hint);font-weight:400;}
+.formula .hl{background:var(--terracotta);color:#fff;}
+.formula .hl small{color:rgba(255,255,255,0.8);}
+.formula i{font-style:normal;color:var(--text-hint);font-weight:700;}
+.season-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0;}
+@media(max-width:740px){.season-grid{grid-template-columns:1fr 1fr;}}
+.season{background:var(--cream);border-radius:10px;padding:13px 14px;border-top:4px solid var(--sage);}
+.season.s2{border-top-color:var(--gold);} .season.s3{border-top-color:var(--terracotta);} .season.s4{border-top-color:var(--navy-light);}
+.season h4{font-family:'Playfair Display',serif;font-size:1.02rem;color:var(--navy);margin-bottom:6px;}
+.season p{font-size:0.82rem;color:var(--text);margin:3px 0;}
+.season p b{font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-hint);display:block;}
+.reading{background:var(--cream);border-radius:10px;padding:16px 20px;font-size:0.98rem;line-height:1.8;margin-bottom:14px;}
+.reading p{margin-bottom:10px;}
+.reading .gl{font-size:0.8rem;color:var(--text-hint);font-style:italic;}
+.rec-label{display:block;font-family:'Space Mono',monospace;font-size:0.66rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-light);margin:14px 0 6px;}
+.rec-input{width:100%;border:2px solid var(--cream-dark);border-radius:10px;padding:11px 14px;font-family:inherit;font-size:0.97rem;color:var(--navy);background:#fff;}
+.rec-input:focus{outline:none;border-color:var(--gold);}
+.task-area.short{min-height:110px;}
+.rec-card{background:#fff;border:1px dashed var(--gold);border-radius:10px;padding:16px 20px;margin:14px 0;font-size:0.92rem;line-height:1.7;}
+.rec-card h4{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--navy);margin-bottom:6px;}
+.rec-card ol{margin:6px 0 6px 20px;} .rec-card li{margin-bottom:3px;}
+.rec-card mark{background:rgba(212,162,76,0.25);padding:0 2px;border-radius:3px;color:inherit;}
+.rec-card .ml{font-family:'Space Mono',monospace;font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:#A07A2D;margin-bottom:6px;display:block;}
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<div class="app">
+
+  <div class="chap-head">
+    <span class="header-badge">SPSCC · ESP 122 · Semana 3</span>
+    <span class="header-title">Capítulo 5.2 · Imágenes (2)</span>
+    <span class="header-subtitle">Preferences, Weather &amp; Time · Likes, Needs &amp; the World Around Us</span>
+  </div>
+
+  <div class="completion-wrap">
+    <div class="completion-top">
+      <span class="completion-label">Mi progreso · My progress</span>
+      <span class="completion-score" id="completionScore">★ 0% correcto</span>
+      <span class="completion-pct" id="completionPct">0%</span>
+    </div>
+    <div class="prog-bar"><div class="prog-fill" id="pf" style="width:0%"></div></div>
+    <div class="completion-legend" id="completionLegend"></div>
+  </div>
+
+  <div class="submit-bar">
+    <label for="studentName">Nombre / Name</label>
+    <input id="studentName" type="text" placeholder="Type your full name here" autocomplete="name">
+    <button class="btn-download" onclick="downloadReport()">↓ Download Report</button>
+    <span class="submit-hint">Enter your name, work through every tab, then download your report and submit it on Canvas.</span>
+  </div>
+
+  <nav class="nav" aria-label="Week 3 sections">
+    <button class="tab active" onclick="switchTab('ov',this)">Inicio</button>
+    <button class="tab" onclick="switchTab('vo',this)">Vocabulario</button>
+    <button class="tab" onclick="switchTab('gr',this)">Gramática</button>
+    <button class="tab" onclick="switchTab('ej',this)">Ejercicios</button>
+    <button class="tab" onclick="switchTab('ta',this)">Tarea · Receta</button>
+    <button class="tab" onclick="switchTab('ju',this)">Juegos</button>
+  </nav>
+
+  <div id="main-content"></div>
+
+  <!-- ═══ INICIO ═══ -->
+  <section class="sec active" id="sec-ov">
+    <h2 class="sec-title">Semana 3 · Gustos, obligaciones y el tiempo</h2>
+    <p class="sec-sub">Capítulo 5.2 · gustar-type verbs · tener que · ordinals · weather, seasons &amp; months</p>
+
+    <div class="ch-intro">
+      <div class="label">Seguimos con el Capítulo 5 · Welcome to Week 3</div>
+      <h2>Say what you like, what you have to do, and what the weather is like</h2>
+      <p>Last week you described your routine. This week you add opinions and context: what you <em>like</em>, <em>love</em> and <em>find interesting</em> (<strong>gustar, encantar, interesar</strong>), what you <em>have to</em> do (<strong>tener que + infinitivo</strong>), the order of things (<strong>primero</strong> through <strong>décimo</strong>), and the world around you: <strong>the weather, the seasons and the months</strong>. You'll read about nature in Patagonia, Monteverde and the Pacific Northwest, and finish with your <strong>Tarea: Una receta</strong>.</p>
+    </div>
+
+    <div class="week-hero">
+      <h1>What this week covers</h1>
+      <p>Everything here is graded automatically, so you can see which topics still need work before class.</p>
+      <div class="topic-chips">
+        <span class="chip">me · te · le · nos · les</span>
+        <span class="chip">gusta / gustan</span>
+        <span class="chip">encantar · interesar · molestar</span>
+        <span class="chip">tener que + infinitivo</span>
+        <span class="chip">primero → décimo</span>
+        <span class="chip">hace sol · llueve · está nublado</span>
+        <span class="chip">las estaciones · los meses</span>
+        <span class="chip">la naturaleza · una receta</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Objetivos · By the end of this week you can… <span class="pill">CAP 5.2</span></div>
+      <div class="obj-grid">
+        <div class="obj"><span class="obj-num">1</span><span class="obj-text">Use <strong>gustar, encantar</strong> and <strong>interesar</strong> with <em>me, te, le, nos, les</em>.</span></div>
+        <div class="obj"><span class="obj-num">2</span><span class="obj-text">Choose between <strong>gusta</strong> and <strong>gustan</strong> (singular, plural or infinitive).</span></div>
+        <div class="obj"><span class="obj-num">3</span><span class="obj-text">Say what you have to do with <strong>tener que + infinitivo</strong>.</span></div>
+        <div class="obj"><span class="obj-num">4</span><span class="obj-text">Use the <strong>ordinal numbers</strong> <em>primero</em> through <em>décimo</em>, including <em>primer</em> and <em>tercer</em>.</span></div>
+        <div class="obj"><span class="obj-num">5</span><span class="obj-text">Describe the <strong>weather</strong> and name the <strong>seasons</strong> and <strong>months</strong>.</span></div>
+        <div class="obj"><span class="obj-num">6</span><span class="obj-text">Write a <strong>recipe</strong> with steps in order and obligations.</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Plan de la semana <span class="pill">SEMANA 3</span></div>
+      <div class="res-grid">
+        <div class="plan-card">
+          <div class="res-card-day">Lunes · self-guided</div>
+          <div class="res-card-topic">Vocabulario + gustar</div>
+          <ul><li>Flip every flashcard in <em>Vocabulario</em></li><li>Read Gramática G1 to G4</li></ul>
+        </div>
+        <div class="plan-card inclass">
+          <div class="res-card-day">Martes · en clase</div>
+          <div class="res-card-topic">Gustar, encantar, interesar</div>
+          <ul><li>¿Qué te gusta? ¿Qué te interesa?</li><li>gusta vs. gustan in conversation</li></ul>
+        </div>
+        <div class="plan-card practice">
+          <div class="res-card-day">Miércoles · práctica</div>
+          <div class="res-card-topic">Ejercicios + Juegos</div>
+          <ul><li>Ejercicios 1, 2 and 6</li><li>Juego 3 · Reto rápido</li><li>Read G5 to G7</li></ul>
+        </div>
+        <div class="plan-card inclass">
+          <div class="res-card-day">Jueves · en clase</div>
+          <div class="res-card-topic">Tener que, ordinales y el tiempo</div>
+          <ul><li>¿Qué tiempo hace? ¿Qué tienes que hacer?</li><li>Ejercicios 3, 4, 5, 7 and 8</li><li>Tarea · Una receta</li></ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="cult-card">
+      <div class="label">Nota cultural · La naturaleza</div>
+      <h3>La Patagonia, Monteverde y el Pacific Northwest</h3>
+      <p><strong>La Patagonia</strong>, in the far south of Argentina and Chile, is a land of glaciers, lakes and mountains where <em>hace mucho viento</em>. Because it is in the Southern Hemisphere, the seasons are reversed: <em>en enero es verano</em>. <strong>Monteverde</strong>, in Costa Rica, is a <em>bosque nuboso</em> (cloud forest): <em>casi siempre está nublado y hay niebla</em>, and it is home to the quetzal. Costa Rica has two seasons instead of four: the dry season and the rainy season, which many people call <em>verano</em> and <em>invierno</em>. Here in the <strong>Pacific Northwest</strong> we have our own rainforest, on the Olympic Peninsula: <em>llueve mucho en otoño y en invierno</em>, and <em>en verano hace sol</em>. Three very different places, and one thing in common: <em>a la gente le encanta la naturaleza</em>.</p>
+      <div class="fact-pills">
+        <span>los glaciares</span>
+        <span>el bosque nuboso</span>
+        <span>la lluvia</span>
+        <span>las estaciones al revés</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ VOCABULARIO ═══ -->
+  <section class="sec" id="sec-vo">
+    <h2 class="sec-title">Vocabulario · El mundo a tu alrededor</h2>
+    <p class="sec-sub">weather · seasons &amp; months · verbs like gustar · ordinals · cooking · nature</p>
+
+    <p class="vocab-hint">Tap any card to flip it: you'll see the translation and an example, and hear both. Test yourself before flipping, and tap the speaker on the back to hear it again.</p>
+    <p class="audio-note">Audio uses your browser's Spanish voice. If you hear nothing, check your volume or try Chrome or Edge.</p>
+
+    <div class="card">
+      <div class="card-title">El tiempo · ¿Qué tiempo hace? <span class="pill">14 EXPRESSIONS</span></div>
+      <div class="vocab-grid" id="fcWeather"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Las estaciones y los meses <span class="pill">16 WORDS</span></div>
+      <div class="vocab-grid" id="fcMonths"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Verbos como gustar · y obligaciones <span class="pill">8 VERBS</span></div>
+      <div class="vocab-grid" id="fcGustar"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Los números ordinales <span class="pill">10 WORDS</span></div>
+      <div class="vocab-grid" id="fcOrd"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">En la cocina <span class="pill">10 WORDS</span></div>
+      <div class="vocab-grid" id="fcCook"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">La naturaleza <span class="pill">8 WORDS</span></div>
+      <div class="vocab-grid" id="fcNature"></div>
+    </div>
+  </section>
+
+  <!-- ═══ GRAMÁTICA ═══ -->
+  <section class="sec" id="sec-gr">
+    <h2 class="sec-title">Gramática · Capítulo 5.2</h2>
+    <p class="sec-sub">gustar + pronouns · gusta / gustan · verbs like gustar · tener que · ordinals · weather</p>
+
+    <!-- G1 gustar -->
+    <div class="gbox">
+      <h3><span class="num">G1</span>GUSTAR + pronombre de objeto indirecto</h3>
+      <p class="sub"><em>Gustar</em> literally means "to be pleasing." The thing you like is the subject, so the verb agrees with <em>the thing</em>, not with the person.</p>
+      <div class="formula">
+        <span><small>(a + person)</small>A mí</span><i>+</i>
+        <span class="hl"><small>pronoun</small>me</span><i>+</i>
+        <span class="hl"><small>verb</small>gusta / gustan</span><i>+</i>
+        <span><small>the thing liked</small>el otoño / los tacos</span>
+      </div>
+      <table class="conj-table">
+        <thead><tr><th>A + persona</th><th>Pronombre</th><th>Ejemplo</th><th>English</th></tr></thead>
+        <tbody>
+          <tr><td><span class="pn">(A mí)</span></td><td class="accent">me</td><td><span class="accent">Me</span> gusta el verano.</td><td>I like summer.</td></tr>
+          <tr><td><span class="pn">(A ti)</span></td><td class="accent">te</td><td>¿<span class="accent">Te</span> gusta cocinar?</td><td>Do you like to cook?</td></tr>
+          <tr><td><span class="pn">(A él / a ella / a usted)</span></td><td class="accent">le</td><td><span class="accent">Le</span> gusta la lluvia.</td><td>He / she likes the rain. You like the rain.</td></tr>
+          <tr><td><span class="pn">(A nosotros/as)</span></td><td class="accent">nos</td><td><span class="accent">Nos</span> gustan las montañas.</td><td>We like the mountains.</td></tr>
+          <tr><td><span class="pn">(A ellos / a ellas / a ustedes)</span></td><td class="accent">les</td><td><span class="accent">Les</span> gusta viajar.</td><td>They like to travel. You all like to travel.</td></tr>
+        </tbody>
+      </table>
+      <div class="ojo"><div class="ojo-title">¡OJO! · never "yo gusto"</div><p>Do not conjugate <em>gustar</em> like a regular verb. <em>I like coffee</em> is <em><strong>Me gusta</strong> el café</em>, not <em>Yo gusto café</em>. The pronouns here are different from last week's reflexive pronouns: it is <strong>le</strong> and <strong>les</strong>, not <em>se</em>.</p></div>
+    </div>
+
+    <!-- G2 gusta vs gustan -->
+    <div class="gbox alt">
+      <h3><span class="num">G2</span>¿Gusta o gustan? · Singular vs. plural</h3>
+      <p class="sub">Look at what comes <em>after</em> the verb. Only two forms are used: <em>gusta</em> and <em>gustan</em>.</p>
+      <div class="three-col">
+        <div class="col-card">
+          <h4>gusta</h4>
+          <div class="meaning">+ one thing (singular noun)</div>
+          <div class="ex">Me <strong>gusta</strong> el otoño.</div>
+          <div class="ex">Nos <strong>gusta</strong> la pizza.</div>
+        </div>
+        <div class="col-card gd">
+          <h4>gusta</h4>
+          <div class="meaning">+ infinitive (one or more)</div>
+          <div class="ex">Me <strong>gusta</strong> cocinar.</div>
+          <div class="ex">Le <strong>gusta</strong> nadar y correr.</div>
+        </div>
+        <div class="col-card sg">
+          <h4>gustan</h4>
+          <div class="meaning">+ plural noun, or two nouns</div>
+          <div class="ex">Me <strong>gustan</strong> los tacos.</div>
+          <div class="ex">Te <strong>gustan</strong> el café y el té.</div>
+        </div>
+      </div>
+      <div class="ojo"><div class="ojo-title">¡OJO! · don't forget el / la / los / las</div><p>Spanish needs the article with the thing you like: <em>Me gusta <strong>el</strong> café</em>, <em>Me gustan <strong>los</strong> gatos</em> (not <em>Me gusta café</em>). To say you don't like something, put <em>no</em> first: <em><strong>No</strong> me gusta el frío.</em></p></div>
+    </div>
+
+    <!-- G3 verbs like gustar -->
+    <div class="gbox alt2">
+      <h3><span class="num">G3</span>Verbos como gustar · encantar, interesar…</h3>
+      <p class="sub">These verbs work exactly like <em>gustar</em>: same pronouns, and only the <em>-a</em> / <em>-an</em> forms.</p>
+      <table class="conj-table">
+        <thead><tr><th>Verbo</th><th>Significado</th><th>+ singular / infinitivo</th><th>+ plural</th></tr></thead>
+        <tbody>
+          <tr><td class="accent">encantar</td><td>to love (things, activities)</td><td>Me <strong>encanta</strong> la primavera.</td><td>Me <strong>encantan</strong> las flores.</td></tr>
+          <tr><td class="accent">interesar</td><td>to interest</td><td>Le <strong>interesa</strong> la naturaleza.</td><td>Le <strong>interesan</strong> los glaciares.</td></tr>
+          <tr><td class="accent">molestar</td><td>to bother</td><td>Nos <strong>molesta</strong> el ruido.</td><td>Nos <strong>molestan</strong> los mosquitos.</td></tr>
+          <tr><td class="accent">fascinar</td><td>to fascinate</td><td>Te <strong>fascina</strong> viajar.</td><td>Te <strong>fascinan</strong> los volcanes.</td></tr>
+          <tr><td class="accent">aburrir</td><td>to bore</td><td>Les <strong>aburre</strong> esperar.</td><td>Les <strong>aburren</strong> los lunes.</td></tr>
+          <tr><td class="accent">importar</td><td>to matter, to be important</td><td>Me <strong>importa</strong> mi familia.</td><td>Me <strong>importan</strong> mis amigos.</td></tr>
+        </tbody>
+      </table>
+      <div class="ex-box">
+        <p><strong>How strong?</strong> No me gusta <em>nada</em> → No me gusta → Me gusta → Me gusta <em>mucho</em> → Me <em>encanta</em>.</p>
+        <p><em>Encantar</em> is already strong, so don't add <em>mucho</em>: <em>Me encanta el chocolate</em> (not <em>Me encanta mucho</em>).</p>
+      </div>
+    </div>
+
+    <!-- G4 a + persona -->
+    <div class="gbox">
+      <h3><span class="num">G4</span>A mí, a ti, a Juan… · Clarify and emphasize</h3>
+      <p class="sub"><em>Le</em> and <em>les</em> can mean several people. Add <em>a + person</em> to make it clear, or to compare opinions.</p>
+      <div class="rule-list">
+        <div class="rule"><h4>Clarify le / les with a name or noun</h4><p><span class="ok">A Camila le</span> gusta el invierno. · <span class="ok">A mis padres les</span> interesa la cocina.</p><p><em>You still need the pronoun:</em> <span class="no">A Camila gusta el invierno.</span></p></div>
+        <div class="rule"><h4>Emphasize or contrast</h4><p><span class="ok">A mí</span> me gusta el calor, pero <span class="ok">a ti</span> te gusta el frío.</p></div>
+        <div class="rule"><h4>Ask and answer</h4><p>¿<span class="ok">A ustedes les</span> gusta la lluvia? · <span class="ok">A mí sí.</span> · <span class="ok">A mí no.</span></p></div>
+        <div class="rule"><h4>Agree with también / tampoco</h4><p>Me encanta el verano. · <span class="ok">A mí también.</span></p><p>No me gusta el viento. · <span class="ok">A mí tampoco.</span></p></div>
+      </div>
+      <div class="ojo"><div class="ojo-title">¡OJO! · a mí, not a yo</div><p>After <em>a</em>, use <strong>mí</strong> and <strong>ti</strong>: <em>a mí, a ti, a él, a ella, a usted, a nosotros, a ellos, a ustedes</em>. <em>Mí</em> has an accent; <em>ti</em> does not.</p></div>
+    </div>
+
+    <!-- G5 tener que -->
+    <div class="gbox alt">
+      <h3><span class="num">G5</span>TENER QUE + infinitivo · Obligation</h3>
+      <p class="sub">To say what someone <em>has to</em> do, conjugate <em>tener</em>, add <em>que</em>, and leave the second verb in the infinitive.</p>
+      <div class="formula">
+        <span class="hl"><small>tener (conjugated)</small>tengo</span><i>+</i>
+        <span class="hl"><small>always</small>que</span><i>+</i>
+        <span><small>infinitive</small>estudiar</span><i>=</i>
+        <span><small>English</small>I have to study</span>
+      </div>
+      <table class="conj-table">
+        <thead><tr><th>Sujeto</th><th>tener</th><th>Ejemplo</th></tr></thead>
+        <tbody>
+          <tr><td><span class="pn">yo</span></td><td class="accent">tengo</td><td>Tengo <strong>que</strong> trabajar el sábado.</td></tr>
+          <tr><td><span class="pn">tú</span></td><td class="accent">tienes</td><td>Tienes <strong>que</strong> cortar las verduras.</td></tr>
+          <tr><td><span class="pn">él/ella/Ud.</span></td><td class="accent">tiene</td><td>Tiene <strong>que</strong> llevar un paraguas.</td></tr>
+          <tr><td><span class="pn">nosotros/as</span></td><td class="accent">tenemos</td><td>Tenemos <strong>que</strong> leer la receta.</td></tr>
+          <tr><td><span class="pn">ellos/Uds.</span></td><td class="accent">tienen</td><td>Tienen <strong>que</strong> estudiar para el examen.</td></tr>
+        </tbody>
+      </table>
+      <div class="ex-box">
+        <p><strong>With reflexive verbs,</strong> attach the pronoun to the infinitive (or put it before <em>tener</em>): <em>Tengo que <strong>levantarme</strong> temprano</em> = <em><strong>Me</strong> tengo que levantar temprano</em>.</p>
+        <p><strong>Also useful:</strong> <em>necesitar + infinitivo</em> (to need to): <em>Necesito comprar tomates.</em></p>
+      </div>
+      <div class="ojo"><div class="ojo-title">¡OJO! · don't drop the que</div><p><em>Tengo <strong>que</strong> estudiar</em> = I have to study. Without <em>que</em>, <em>tener</em> just means "to have": <em>Tengo un examen</em> = I have an exam.</p></div>
+    </div>
+
+    <!-- G6 ordinals -->
+    <div class="gbox alt2">
+      <h3><span class="num">G6</span>Los números ordinales · primero → décimo</h3>
+      <p class="sub">Ordinals say the order of things. They go <em>before</em> the noun and agree with it, like adjectives.</p>
+      <table class="conj-table">
+        <thead><tr><th>N.º</th><th>Ordinal</th><th>N.º</th><th>Ordinal</th></tr></thead>
+        <tbody>
+          <tr><td><span class="pn">1.º</span></td><td class="accent">primero (primer)</td><td><span class="pn">6.º</span></td><td class="accent">sexto</td></tr>
+          <tr><td><span class="pn">2.º</span></td><td class="accent">segundo</td><td><span class="pn">7.º</span></td><td class="accent">séptimo</td></tr>
+          <tr><td><span class="pn">3.º</span></td><td class="accent">tercero (tercer)</td><td><span class="pn">8.º</span></td><td class="accent">octavo</td></tr>
+          <tr><td><span class="pn">4.º</span></td><td class="accent">cuarto</td><td><span class="pn">9.º</span></td><td class="accent">noveno</td></tr>
+          <tr><td><span class="pn">5.º</span></td><td class="accent">quinto</td><td><span class="pn">10.º</span></td><td class="accent">décimo</td></tr>
+        </tbody>
+      </table>
+      <div class="three-col">
+        <div class="col-card">
+          <h4>Concordancia</h4>
+          <div class="meaning">they agree: -o, -a, -os, -as</div>
+          <div class="ex">el <strong>segundo</strong> paso</div>
+          <div class="ex">la <strong>segunda</strong> semana</div>
+        </div>
+        <div class="col-card gd">
+          <h4>primer · tercer</h4>
+          <div class="meaning">drop the -o before a masculine singular noun</div>
+          <div class="ex">el <strong>primer</strong> mes</div>
+          <div class="ex">el <strong>tercer</strong> piso · la <strong>tercera</strong> clase</div>
+        </div>
+        <div class="col-card sg">
+          <h4>Para dar instrucciones</h4>
+          <div class="meaning">alone, to order steps</div>
+          <div class="ex"><strong>Primero</strong>, tienes que lavar los tomates.</div>
+          <div class="ex"><strong>Segundo</strong>, tienes que cortar la cebolla.</div>
+        </div>
+      </div>
+      <div class="ojo"><div class="ojo-title">¡OJO! · las fechas</div><p>For dates, only the first of the month uses an ordinal: <em>el <strong>primero</strong> de mayo</em>. All other days use regular numbers: <em>el <strong>dos</strong> de mayo</em>, <em>el <strong>quince</strong> de septiembre</em>. After <em>décimo</em>, most people use regular numbers too: <em>el piso <strong>once</strong></em>.</p></div>
+    </div>
+
+    <!-- G7 weather -->
+    <div class="gbox">
+      <h3><span class="num">G7</span>El tiempo, las estaciones y los meses</h3>
+      <p class="sub">To ask about the weather: <em>¿Qué tiempo hace?</em> Spanish uses three different verbs where English uses "it's."</p>
+      <div class="three-col">
+        <div class="col-card">
+          <h4>HACE</h4>
+          <div class="meaning">+ noun: sol, calor, frío, viento</div>
+          <div class="ex"><strong>Hace</strong> sol. · <strong>Hace</strong> calor.</div>
+          <div class="ex"><strong>Hace</strong> mucho frío. · <strong>Hace</strong> buen tiempo.</div>
+        </div>
+        <div class="col-card gd">
+          <h4>ESTÁ</h4>
+          <div class="meaning">+ adjective: nublado, despejado</div>
+          <div class="ex"><strong>Está</strong> nublado.</div>
+          <div class="ex"><strong>Está</strong> despejado. · <strong>Está</strong> lloviendo.</div>
+        </div>
+        <div class="col-card sg">
+          <h4>HAY · LLUEVE · NIEVA</h4>
+          <div class="meaning">hay + noun · weather verbs</div>
+          <div class="ex"><strong>Hay</strong> niebla. · <strong>Hay</strong> tormenta.</div>
+          <div class="ex"><strong>Llueve</strong> mucho. · <strong>Nieva</strong> en las montañas.</div>
+        </div>
+      </div>
+      <div class="ex-box">
+        <p><strong>Llover (o→ue)</strong> and <strong>nevar (e→ie)</strong> are stem-changing verbs, like last week's. They are only used in the <em>él/ella</em> form: <em>llueve</em>, <em>nieva</em>.</p>
+        <p><strong>Mucho, not muy:</strong> <em>Hace <strong>mucho</strong> calor</em> (calor is a noun). But <em>Está <strong>muy</strong> nublado</em> (nublado is an adjective).</p>
+      </div>
+      <div class="season-grid">
+        <div class="season"><h4>la primavera</h4><p><b>Hemisferio norte</b>marzo, abril, mayo</p><p><b>Hemisferio sur</b>septiembre, octubre, noviembre</p></div>
+        <div class="season s2"><h4>el verano</h4><p><b>Hemisferio norte</b>junio, julio, agosto</p><p><b>Hemisferio sur</b>diciembre, enero, febrero</p></div>
+        <div class="season s3"><h4>el otoño</h4><p><b>Hemisferio norte</b>septiembre, octubre, noviembre</p><p><b>Hemisferio sur</b>marzo, abril, mayo</p></div>
+        <div class="season s4"><h4>el invierno</h4><p><b>Hemisferio norte</b>diciembre, enero, febrero</p><p><b>Hemisferio sur</b>junio, julio, agosto</p></div>
+      </div>
+      <div class="ojo"><div class="ojo-title">¡OJO! · minúsculas</div><p>Months and seasons are <strong>not capitalized</strong> in Spanish: <em>enero</em>, <em>el verano</em>. Use <em>en</em> for "in": <em><strong>en</strong> julio</em>, <em><strong>en</strong> invierno</em>. Dates go day first: <em>el 4 de octubre</em>.</p></div>
+    </div>
+  </section>
+
+  <!-- ═══ EJERCICIOS ═══ -->
+  <section class="sec" id="sec-ej">
+    <h2 class="sec-title">Ejercicios · Práctica</h2>
+    <p class="sec-sub">Ejercicio 1 · 2 · 3 · 4 · 5 · 6 · 7 · 8</p>
+
+    <div class="card">
+      <div class="card-title">Ejercicio 1 · Los pronombres <span class="pill">ME · TE · LE · NOS · LES</span></div>
+      <div class="word-bank"><span class="word-bank-label">Word Bank</span><span class="word-bank-words"><span>me</span><span>te</span><span>le</span><span>nos</span><span>les</span></span></div>
+      <div class="ex-item"><span class="ex-num">1</span><span class="ex-text">A mí <input class="blk" id="e1_1" data-answer="me" placeholder="___"> gusta el verano.</span></div>
+      <div class="ex-item"><span class="ex-num">2</span><span class="ex-text">A ti <input class="blk" id="e1_2" data-answer="te" placeholder="___"> encantan las montañas.</span></div>
+      <div class="ex-item"><span class="ex-num">3</span><span class="ex-text">A mi hermana <input class="blk" id="e1_3" data-answer="le" placeholder="___"> interesa la cocina.</span></div>
+      <div class="ex-item"><span class="ex-num">4</span><span class="ex-text">A nosotros <input class="blk" id="e1_4" data-answer="nos" placeholder="___"> gusta caminar en el bosque.</span></div>
+      <div class="ex-item"><span class="ex-num">5</span><span class="ex-text">A mis amigos <input class="blk" id="e1_5" data-answer="les" placeholder="___"> molesta el frío.</span></div>
+      <div class="ex-item"><span class="ex-num">6</span><span class="ex-text">A usted <input class="blk" id="e1_6" data-answer="le" placeholder="___"> gusta el café, ¿verdad?</span></div>
+      <div class="ex-item"><span class="ex-num">7</span><span class="ex-text">A Ana y a mí <input class="blk" id="e1_7" data-answer="nos" placeholder="___"> encanta la primavera.</span></div>
+      <div class="ex-item"><span class="ex-num">8</span><span class="ex-text">A ustedes <input class="blk" id="e1_8" data-answer="les" placeholder="___"> interesan las recetas.</span></div>
+      <button class="chk-btn" onclick="checkBlanks('e1_1,e1_2,e1_3,e1_4,e1_5,e1_6,e1_7,e1_8','rs1')">Check Answers</button>
+      <button class="rst-btn" onclick="resetBlanks('e1_1,e1_2,e1_3,e1_4,e1_5,e1_6,e1_7,e1_8','rs1')">Reset</button>
+      <div class="res-msg" id="rs1" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Ejercicio 2 · ¿Singular o plural? <span class="pill">GUSTA / GUSTAN</span></div>
+      <p style="font-size:0.92rem;color:var(--text-light);margin-bottom:14px;">Write the correct form of the verb in parentheses. Look at what comes after the blank.</p>
+      <div class="ex-item"><span class="ex-num">1</span><span class="ex-text">Me <input class="blk" id="e2_1" data-answer="gusta" placeholder="___"> el otoño. <span class="ex-hint">(gustar)</span></span></div>
+      <div class="ex-item"><span class="ex-num">2</span><span class="ex-text">Nos <input class="blk" id="e2_2" data-answer="encantan" placeholder="___"> las montañas. <span class="ex-hint">(encantar)</span></span></div>
+      <div class="ex-item"><span class="ex-num">3</span><span class="ex-text">¿Te <input class="blk" id="e2_3" data-answer="gusta" placeholder="___"> cocinar? <span class="ex-hint">(gustar)</span></span></div>
+      <div class="ex-item"><span class="ex-num">4</span><span class="ex-text">A Luis le <input class="blk" id="e2_4" data-answer="interesan" placeholder="___"> los deportes. <span class="ex-hint">(interesar)</span></span></div>
+      <div class="ex-item"><span class="ex-num">5</span><span class="ex-text">Me <input class="blk" id="e2_5" data-answer="gusta" placeholder="___"> nadar y correr en verano. <span class="ex-hint">(gustar)</span></span></div>
+      <div class="ex-item"><span class="ex-num">6</span><span class="ex-text">A mis padres les <input class="blk" id="e2_6" data-answer="molesta" placeholder="___"> la lluvia. <span class="ex-hint">(molestar)</span></span></div>
+      <div class="ex-item"><span class="ex-num">7</span><span class="ex-text">Nos <input class="blk" id="e2_7" data-answer="gustan" placeholder="___"> el café y el té. <span class="ex-hint">(gustar)</span></span></div>
+      <div class="ex-item"><span class="ex-num">8</span><span class="ex-text">A ti te <input class="blk" id="e2_8" data-answer="fascinan" placeholder="___"> los volcanes. <span class="ex-hint">(fascinar)</span></span></div>
+      <button class="chk-btn" onclick="checkBlanks('e2_1,e2_2,e2_3,e2_4,e2_5,e2_6,e2_7,e2_8','rs2')">Check Answers</button>
+      <button class="rst-btn" onclick="resetBlanks('e2_1,e2_2,e2_3,e2_4,e2_5,e2_6,e2_7,e2_8','rs2')">Reset</button>
+      <div class="res-msg" id="rs2" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Ejercicio 3 · Obligaciones <span class="pill">TENER QUE + INFINITIVO</span></div>
+      <p style="font-size:0.92rem;color:var(--text-light);margin-bottom:14px;">Write the correct form of <em>tener</em>, or the missing word.</p>
+      <div class="ex-item"><span class="ex-num">1</span><span class="ex-text">Yo <input class="blk" id="e3_1" data-answer="tengo" placeholder="___"> que estudiar para el examen.</span></div>
+      <div class="ex-item"><span class="ex-num">2</span><span class="ex-text">Tú <input class="blk" id="e3_2" data-answer="tienes" placeholder="___"> que cortar las verduras.</span></div>
+      <div class="ex-item"><span class="ex-num">3</span><span class="ex-text">Mi mamá <input class="blk" id="e3_3" data-answer="tiene" placeholder="___"> que trabajar los sábados.</span></div>
+      <div class="ex-item"><span class="ex-num">4</span><span class="ex-text">Nosotros <input class="blk" id="e3_4" data-answer="tenemos" placeholder="___"> que levantarnos temprano.</span></div>
+      <div class="ex-item"><span class="ex-num">5</span><span class="ex-text">Ustedes <input class="blk" id="e3_5" data-answer="tienen" placeholder="___"> que leer la receta.</span></div>
+      <div class="ex-item"><span class="ex-num">6</span><span class="ex-text">Hoy llueve. Tengo <input class="blk" id="e3_6" data-answer="que" placeholder="___"> llevar un paraguas. <span class="ex-hint">(missing word)</span></span></div>
+      <button class="chk-btn" onclick="checkBlanks('e3_1,e3_2,e3_3,e3_4,e3_5,e3_6','rs3')">Check Answers</button>
+      <button class="rst-btn" onclick="resetBlanks('e3_1,e3_2,e3_3,e3_4,e3_5,e3_6','rs3')">Reset</button>
+      <div class="res-msg" id="rs3" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Ejercicio 4 · Los ordinales <span class="pill">PRIMERO → DÉCIMO</span></div>
+      <p style="font-size:0.92rem;color:var(--text-light);margin-bottom:14px;">Write the ordinal number in words. Watch the ending: <em>-o</em>, <em>-a</em>, or the short forms <em>primer</em> and <em>tercer</em>.</p>
+      <div class="ex-item"><span class="ex-num">1</span><span class="ex-text">Enero es el <input class="blk" id="e4_1" data-answer="primer" placeholder="___"> mes del año. <span class="ex-hint">(1.º)</span></span></div>
+      <div class="ex-item"><span class="ex-num">2</span><span class="ex-text">Marzo es el <input class="blk" id="e4_2" data-answer="tercer" placeholder="___"> mes. <span class="ex-hint">(3.º)</span></span></div>
+      <div class="ex-item"><span class="ex-num">3</span><span class="ex-text">Mayo es el <input class="blk" id="e4_3" data-answer="quinto" placeholder="___"> mes. <span class="ex-hint">(5.º)</span></span></div>
+      <div class="ex-item"><span class="ex-num">4</span><span class="ex-text">El martes es el <input class="blk" id="e4_4" data-answer="segundo" placeholder="___"> día de la semana. <span class="ex-hint">(2.º)</span></span></div>
+      <div class="ex-item"><span class="ex-num">5</span><span class="ex-text">Es mi <input class="blk" id="e4_5" data-answer="primera" placeholder="___"> clase de español. <span class="ex-hint">(1.ª)</span></span></div>
+      <div class="ex-item"><span class="ex-num">6</span><span class="ex-text">Vivo en el <input class="blk" id="e4_6" data-answer="cuarto" placeholder="___"> piso. <span class="ex-hint">(4.º)</span></span></div>
+      <div class="ex-item"><span class="ex-num">7</span><span class="ex-text">Agosto es el <input class="blk" id="e4_7" data-answer="octavo" placeholder="___"> mes. <span class="ex-hint">(8.º)</span></span></div>
+      <div class="ex-item"><span class="ex-num">8</span><span class="ex-text">Estamos en la <input class="blk" id="e4_8" data-answer="tercera" placeholder="___"> semana del trimestre. <span class="ex-hint">(3.ª)</span></span></div>
+      <button class="chk-btn" onclick="checkBlanks('e4_1,e4_2,e4_3,e4_4,e4_5,e4_6,e4_7,e4_8','rs4')">Check Answers</button>
+      <button class="rst-btn" onclick="resetBlanks('e4_1,e4_2,e4_3,e4_4,e4_5,e4_6,e4_7,e4_8','rs4')">Reset</button>
+      <div class="res-msg" id="rs4" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Ejercicio 5 · El tiempo y las estaciones <span class="pill">FILL-IN</span></div>
+      <div class="word-bank"><span class="word-bank-label">Word Bank · use each word once</span><span class="word-bank-words"><span>hace</span><span>está</span><span>hay</span><span>llueve</span><span>nieva</span><span>invierno</span><span>verano</span><span>primavera</span></span></div>
+      <div class="ex-item"><span class="ex-num">1</span><span class="ex-text">En Seattle <input class="blk" id="e5_1" data-answer="llueve" placeholder="___"> mucho en noviembre.</span></div>
+      <div class="ex-item"><span class="ex-num">2</span><span class="ex-text">En julio <input class="blk" id="e5_2" data-answer="hace" placeholder="___"> calor.</span></div>
+      <div class="ex-item"><span class="ex-num">3</span><span class="ex-text">Hoy no hay sol. El cielo <input class="blk" id="e5_3" data-answer="está" placeholder="___"> nublado.</span></div>
+      <div class="ex-item"><span class="ex-num">4</span><span class="ex-text">En el monte Rainier <input class="blk" id="e5_4" data-answer="nieva" placeholder="___"> mucho.</span></div>
+      <div class="ex-item"><span class="ex-num">5</span><span class="ex-text">Por la mañana <input class="blk" id="e5_5" data-answer="hay" placeholder="___"> niebla en el bosque.</span></div>
+      <div class="ex-item"><span class="ex-num">6</span><span class="ex-text">En Washington, diciembre, enero y febrero son meses de <input class="blk" id="e5_6" data-answer="invierno" placeholder="___">.</span></div>
+      <div class="ex-item"><span class="ex-num">7</span><span class="ex-text">En la Patagonia, enero es un mes de <input class="blk" id="e5_7" data-answer="verano" placeholder="___">.</span></div>
+      <div class="ex-item"><span class="ex-num">8</span><span class="ex-text">En abril hay muchas flores porque es <input class="blk" id="e5_8" data-answer="primavera" placeholder="___">.</span></div>
+      <button class="chk-btn" onclick="checkBlanks('e5_1,e5_2,e5_3,e5_4,e5_5,e5_6,e5_7,e5_8','rs5')">Check Answers</button>
+      <button class="rst-btn" onclick="resetBlanks('e5_1,e5_2,e5_3,e5_4,e5_5,e5_6,e5_7,e5_8','rs5')">Reset</button>
+      <div class="res-msg" id="rs5" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Ejercicio 6 · ¿Cuál es correcta? <span class="pill">ERRORES COMUNES</span></div>
+      <p style="font-size:0.92rem;color:var(--text-light);margin-bottom:14px;">Choose the only correct sentence. You'll see the explanation right away.</p>
+      <div id="placeCont"></div>
+      <div class="res-msg" id="rs6" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Ejercicio 7 · Lectura · A Camila le encanta la naturaleza <span class="pill">READING</span></div>
+      <p style="font-size:0.92rem;color:var(--text-light);margin-bottom:14px;">Read the text, then answer the questions. Tap the speaker to hear it.</p>
+      <div class="reading" id="readingText">
+        <p>Me llamo Camila y me encanta la naturaleza. Vivo en Olympia, en el Pacific Northwest. Aquí llueve mucho en otoño y en invierno, pero en verano hace sol y no hace mucho calor. Me gustan los bosques verdes y las montañas con nieve.</p>
+        <p>Este año quiero visitar dos lugares. El primer lugar es Monteverde, en Costa Rica. Es un bosque nuboso: casi siempre está nublado y hay niebla. Allí llueve mucho de mayo a noviembre. A mí me interesan los pájaros, y en Monteverde vive el quetzal.</p>
+        <p>El segundo lugar es la Patagonia, en el sur de Argentina y Chile. Allí hay glaciares, lagos y montañas, y hace mucho viento. En la Patagonia las estaciones son al revés: en diciembre, enero y febrero es verano. Por eso tengo que viajar en enero. ¡Y tengo que llevar una chaqueta, porque allí hace frío también en verano!</p>
+        <p class="gl">bosque nuboso = cloud forest · casi siempre = almost always · pájaros = birds · al revés = reversed · chaqueta = jacket</p>
+      </div>
+      <button class="toggle-btn" style="margin:0 0 14px 0;" onclick="speakReading()">Escuchar la lectura</button>
+      <button class="rst-btn" style="margin-top:0;" onclick="stopSpeak()">Stop</button>
+      <div id="readCont"></div>
+      <div class="res-msg" id="rsRead" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Ejercicio 8 · Respuesta corta · Sobre ti <span class="pill">SE CORRIGE SOLA</span></div>
+      <p style="font-size:0.92rem;color:var(--text-light);margin-bottom:14px;">Answer each question about yourself in a full Spanish sentence. The page checks that you used the right structure.</p>
+      <div id="shortCont"></div>
+      <button class="chk-btn" onclick="checkShort()">Check My Answers</button>
+      <button class="rst-btn" onclick="resetShort()">Reset</button>
+      <div class="res-msg" id="rs8" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ═══ TAREA ═══ -->
+  <section class="sec" id="sec-ta">
+    <h2 class="sec-title">Tarea · Una receta</h2>
+    <p class="sec-sub">comida y cocinar · ordinales · tener que + infinitivo · gustar</p>
+
+    <div class="ch-intro">
+      <div class="label">Tarea de la semana · Writing task</div>
+      <h2>Write a recipe for a dish you love</h2>
+      <p>Choose a simple dish you know how to make: a family recipe, a snack, a drink, your favorite breakfast. List the <strong>ingredients</strong>, then write the <strong>steps in order</strong> using ordinal numbers (<em>primero, segundo, tercero…</em>) and <em>tener que + infinitivo</em>. Finish by saying why you like it and when you eat it.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Paso a paso <span class="pill">3 PARTES</span></div>
+      <div class="steps">
+        <div class="step"><b>1 · Los ingredientes</b>¿Qué necesitas? Write at least 4 ingredients, one per line.</div>
+        <div class="step"><b>2 · Los pasos</b>Primero, tienes que… Segundo, tienes que… At least 5 steps.</div>
+        <div class="step"><b>3 · Tu opinión</b>¿Por qué te gusta? ¿Cuándo la comes? Me encanta… en invierno, cuando hace frío.</div>
+      </div>
+      <div class="rec-card">
+        <span class="ml">Modelo · una receta de El Salvador</span>
+        <h4>Pupusas de queso</h4>
+        <p><strong>Ingredientes:</strong> harina de maíz, agua, sal, queso, curtido, salsa de tomate.</p>
+        <ol>
+          <li><mark>Primero</mark>, <mark>tienes que mezclar</mark> la harina de maíz con agua y sal.</li>
+          <li><mark>Segundo</mark>, <mark>tienes que formar</mark> una bola con la masa.</li>
+          <li><mark>Tercero</mark>, <mark>tienes que poner</mark> queso en el centro y cerrar la bola.</li>
+          <li><mark>Cuarto</mark>, <mark>tienes que aplastar</mark> la bola para hacer una tortilla gruesa.</li>
+          <li><mark>Quinto</mark>, <mark>tienes que cocinar</mark> la pupusa en un comal caliente, tres minutos por cada lado.</li>
+          <li><mark>Por último</mark>, <mark>tienes que servir</mark> las pupusas con curtido y salsa de tomate.</li>
+        </ol>
+        <p><mark>Me encantan</mark> las pupusas. <mark>Me gusta</mark> comerlas <mark>en invierno</mark>, cuando <mark>hace frío</mark>.</p>
+      </div>
+      <div class="word-bank"><span class="word-bank-label">Verbos útiles para cocinar</span><span class="word-bank-words"><span>lavar</span><span>pelar</span><span>cortar</span><span>mezclar</span><span>añadir</span><span>batir</span><span>poner</span><span>calentar</span><span>hervir</span><span>cocinar</span><span>hornear</span><span>probar</span><span>servir</span></span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Tu receta <span class="pill">5 PASOS O MÁS</span></div>
+      <label class="rec-label" for="recTitle" style="margin-top:0;">Nombre de la receta</label>
+      <input class="rec-input" id="recTitle" type="text" placeholder="Tacos de pollo, Chocolate caliente, Ensalada de frutas…" autocomplete="off">
+      <label class="rec-label" for="recIng">Ingredientes · one per line</label>
+      <textarea class="task-area short" id="recIng" placeholder="tomates&#10;cebolla&#10;sal&#10;…" spellcheck="false"></textarea>
+      <label class="rec-label" for="taskText">Pasos y tu opinión</label>
+      <textarea class="task-area" id="taskText" placeholder="Primero, tienes que…" spellcheck="false"></textarea>
+      <div class="wc" id="taskWc">0 ingredientes · 0 oraciones · 0 palabras</div>
+      <ul class="checklist" id="taskChecklist"></ul>
+      <button class="chk-btn" onclick="checkTask()">Check My Recipe</button>
+      <button class="rst-btn" onclick="resetTask()">Reset</button>
+      <div class="res-msg" id="rsTask" aria-live="polite"></div>
+      <p style="font-size:0.78rem;color:var(--text-hint);font-style:italic;margin-top:10px;">This page does not save automatically. Download your report when you finish: your recipe is included in it.</p>
+    </div>
+  </section>
+
+  <!-- ═══ JUEGOS ═══ -->
+  <section class="sec" id="sec-ju">
+    <h2 class="sec-title">Juegos · Play &amp; review</h2>
+    <p class="sec-sub">weather matching · months &amp; ordinals · quiz · speed challenge</p>
+
+    <div class="card">
+      <div class="card-title">Juego 1 · Emparejamiento · ¿Qué tiempo hace? <span class="pill">MATCHING</span></div>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:14px;">Click a Spanish expression, then its English meaning. Correct pairs turn green.</p>
+      <div id="matchCont"></div>
+      <button class="rst-btn" style="margin-left:0;" onclick="buildMatch('w')">Shuffle / Reset</button>
+      <div class="res-msg" id="rsMatch" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Juego 2 · Emparejamiento · Los meses en orden <span class="pill">ORDINALES</span></div>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:14px;">Which month is it? Click an ordinal, then the month it describes.</p>
+      <div id="matchCont2"></div>
+      <button class="rst-btn" style="margin-left:0;" onclick="buildMatch('m')">Shuffle / Reset</button>
+      <div class="res-msg" id="rsMatch2" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Juego 3 · Reto rápido · Completa la oración <span class="pill">12 ORACIONES</span></div>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:14px;">Choose the word that completes each sentence. Build your streak!</p>
+      <div class="game-wrap" id="gameWrap">
+        <div class="game-scorebar">
+          <div>Puntos<b id="gScore">0</b></div>
+          <div>Racha<b id="gStreak">0</b></div>
+          <div>Pregunta<b id="gNum">1/12</b></div>
+        </div>
+        <div class="game-prompt" id="gPrompt">…</div>
+        <div class="game-sub" id="gSub"></div>
+        <div class="game-opts" id="gOpts"></div>
+        <div class="game-feedback" id="gFb"></div>
+      </div>
+      <button class="rst-btn" style="margin-left:0;" onclick="startGame()">Restart Game</button>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Juego 4 · Opción múltiple · Capítulo 5.2 <span class="pill">QUIZ</span></div>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:14px;">Ten questions on this week's grammar and vocabulary. Pick the best answer, then score it.</p>
+      <div id="quizCont"></div>
+      <button class="chk-btn" onclick="checkQuiz()">Score My Quiz</button>
+      <button class="rst-btn" onclick="resetQuiz()">Reset</button>
+      <div class="res-msg" id="rsQuiz" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <div class="footer">
+    SPSCC · Spanish 122 · Semana 3 · Capítulo 5.2 · Imágenes (2)
+  </div>
+
+</div>
+
+<script>
+/* ── Tabs ── */
+function switchTab(tab, el){
+  document.querySelectorAll('.tab').forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+  document.querySelectorAll('.sec').forEach(function(s){ s.classList.remove('active'); });
+  if(el){ el.classList.add('active'); el.setAttribute('aria-selected','true'); }
+  var s = document.getElementById('sec-'+tab); if(s) s.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+/* ── Helpers ── */
+function normalize(s){ if(!s) return ''; return s.toString().trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' '); }
+function wordsOf(str){ return normalize(str).replace(/[¿?¡!.,;:"()]/g,' ').split(/\s+/).filter(Boolean); }
+function val(id){ var el=document.getElementById(id); return el?(el.value||'').trim():''; }
+function setMsg(id, ok, text){ var m=document.getElementById(id); if(!m) return; m.textContent=text; m.className='res-msg '+(ok?'ok':'ng'); }
+function showFb(id, ok, msg){ var fb=document.getElementById(id); if(!fb) return; fb.className='task-fb show '+(ok?'ok':'ng'); fb.textContent=(ok?'✓ ':'✗ ')+msg; }
+function clearFb(id){ var fb=document.getElementById(id); if(fb) fb.className='task-fb'; }
+
+/* ── Audio: browser Spanish voice (Web Speech API) ── */
+var SPK = '<svg class="icon-speaker" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>';
+var esVoice = null;
+function pickVoice(){
+  if(!('speechSynthesis' in window)) return;
+  var vs = window.speechSynthesis.getVoices(); if(!vs || !vs.length) return;
+  var prefs = ['es-MX','es-US','es-419','es-CO','es-ES'];
+  for(var p=0;p<prefs.length;p++){ for(var i=0;i<vs.length;i++){ if((vs[i].lang||'').replace('_','-')===prefs[p]){ esVoice=vs[i]; return; } } }
+  for(var j=0;j<vs.length;j++){ if((vs[j].lang||'').toLowerCase().indexOf('es')===0){ esVoice=vs[j]; return; } }
+}
+if('speechSynthesis' in window){ pickVoice(); window.speechSynthesis.onvoiceschanged = pickVoice; }
+function speak(parts){
+  try{
+    if(!('speechSynthesis' in window)) return;
+    var synth = window.speechSynthesis; synth.cancel();
+    parts.forEach(function(t){
+      var u = new SpeechSynthesisUtterance(t.replace(/\(.*?\)/g,''));
+      u.lang = esVoice ? esVoice.lang : 'es-MX'; if(esVoice) u.voice = esVoice; u.rate = 0.9;
+      synth.speak(u);
+    });
+  }catch(e){}
+}
+function stopSpeak(){ try{ window.speechSynthesis.cancel(); }catch(e){} }
+function speakReading(){ var ps=[].slice.call(document.querySelectorAll('#readingText p:not(.gl)')).map(function(p){ return p.textContent; }); speak(ps); }
+
+/* ── Flashcards ── */
+var FC = {
+  weather: [
+    {es:'¿Qué tiempo hace?', note:'pregunta', en:'What\'s the weather like?', ex:'¿Qué tiempo hace hoy en Olympia?'},
+    {es:'hace sol', note:'hace + sustantivo', en:'it\'s sunny', ex:'En julio hace sol.'},
+    {es:'hace calor', note:'hace + sustantivo', en:'it\'s hot', ex:'En verano hace mucho calor.'},
+    {es:'hace frío', note:'hace + sustantivo', en:'it\'s cold', ex:'En enero hace frío.'},
+    {es:'hace viento', note:'hace + sustantivo', en:'it\'s windy', ex:'En la Patagonia hace mucho viento.'},
+    {es:'hace fresco', note:'hace + sustantivo', en:'it\'s cool', ex:'En otoño hace fresco.'},
+    {es:'hace buen tiempo', note:'hace + sustantivo', en:'the weather is nice', ex:'Hoy hace buen tiempo.'},
+    {es:'hace mal tiempo', note:'hace + sustantivo', en:'the weather is bad', ex:'Hace mal tiempo: no quiero salir.'},
+    {es:'llueve', note:'llover · o→ue', en:'it rains, it\'s raining', ex:'En Seattle llueve mucho.'},
+    {es:'nieva', note:'nevar · e→ie', en:'it snows, it\'s snowing', ex:'En las montañas nieva en invierno.'},
+    {es:'está nublado', note:'está + adjetivo', en:'it\'s cloudy', ex:'Hoy está nublado.'},
+    {es:'está despejado', note:'está + adjetivo', en:'it\'s clear', ex:'Esta noche está despejado.'},
+    {es:'hay niebla', note:'hay + sustantivo', en:'it\'s foggy', ex:'Por la mañana hay niebla.'},
+    {es:'hay tormenta', note:'hay + sustantivo', en:'there\'s a storm', ex:'Hay tormenta: tengo que volver a casa.'}
+  ],
+  months: [
+    {es:'la primavera', note:'estación', en:'spring', ex:'En primavera hay muchas flores.'},
+    {es:'el verano', note:'estación', en:'summer', ex:'Me encanta el verano.'},
+    {es:'el otoño', note:'estación', en:'fall, autumn', ex:'En otoño llueve mucho.'},
+    {es:'el invierno', note:'estación', en:'winter', ex:'En invierno hace frío.'},
+    {es:'enero', note:'el primer mes', en:'January', ex:'En enero nieva en las montañas.'},
+    {es:'febrero', note:'el segundo mes', en:'February', ex:'Febrero es un mes corto.'},
+    {es:'marzo', note:'el tercer mes', en:'March', ex:'La primavera empieza en marzo.'},
+    {es:'abril', note:'el cuarto mes', en:'April', ex:'En abril llueve mucho.'},
+    {es:'mayo', note:'el quinto mes', en:'May', ex:'El primero de mayo es feriado.'},
+    {es:'junio', note:'el sexto mes', en:'June', ex:'Las clases terminan en junio.'},
+    {es:'julio', note:'el séptimo mes', en:'July', ex:'En julio hace calor.'},
+    {es:'agosto', note:'el octavo mes', en:'August', ex:'En agosto voy a la playa.'},
+    {es:'septiembre', note:'el noveno mes', en:'September', ex:'Las clases empiezan en septiembre.'},
+    {es:'octubre', note:'el décimo mes', en:'October', ex:'En octubre hace fresco.'},
+    {es:'noviembre', note:'el mes once', en:'November', ex:'En noviembre llueve casi todos los días.'},
+    {es:'diciembre', note:'el mes doce', en:'December', ex:'En diciembre es verano en Argentina.'}
+  ],
+  gustar: [
+    {es:'gustar', note:'me gusta / me gustan', en:'to like (to be pleasing)', ex:'Me gusta el otoño.'},
+    {es:'encantar', note:'como gustar', en:'to love (things, activities)', ex:'Me encanta cocinar.'},
+    {es:'interesar', note:'como gustar', en:'to interest', ex:'Me interesa la naturaleza.'},
+    {es:'molestar', note:'como gustar', en:'to bother', ex:'Me molesta el ruido.'},
+    {es:'fascinar', note:'como gustar', en:'to fascinate', ex:'Me fascinan los volcanes.'},
+    {es:'aburrir', note:'como gustar', en:'to bore', ex:'Me aburren los lunes.'},
+    {es:'tener que', note:'+ infinitivo', en:'to have to', ex:'Tengo que estudiar.'},
+    {es:'necesitar', note:'+ infinitivo', en:'to need (to)', ex:'Necesito comprar tomates.'}
+  ],
+  ord: [
+    {es:'primero', note:'1.º · primer + sust. masc.', en:'first', ex:'Enero es el primer mes.'},
+    {es:'segundo', note:'2.º', en:'second', ex:'Es mi segunda clase del día.'},
+    {es:'tercero', note:'3.º · tercer + sust. masc.', en:'third', ex:'Vivo en el tercer piso.'},
+    {es:'cuarto', note:'4.º', en:'fourth', ex:'Abril es el cuarto mes.'},
+    {es:'quinto', note:'5.º', en:'fifth', ex:'Es el quinto paso de la receta.'},
+    {es:'sexto', note:'6.º', en:'sixth', ex:'Junio es el sexto mes.'},
+    {es:'séptimo', note:'7.º', en:'seventh', ex:'Julio es el séptimo mes.'},
+    {es:'octavo', note:'8.º', en:'eighth', ex:'Agosto es el octavo mes.'},
+    {es:'noveno', note:'9.º', en:'ninth', ex:'Es la novena semana.'},
+    {es:'décimo', note:'10.º', en:'tenth', ex:'Octubre es el décimo mes.'}
+  ],
+  cook: [
+    {es:'la receta', note:'sustantivo', en:'recipe', ex:'Tengo una receta de mi abuela.'},
+    {es:'el ingrediente', note:'sustantivo', en:'ingredient', ex:'El primer ingrediente es la harina.'},
+    {es:'cortar', note:'regular -ar', en:'to cut', ex:'Tienes que cortar la cebolla.'},
+    {es:'mezclar', note:'regular -ar', en:'to mix', ex:'Tienes que mezclar la harina y el agua.'},
+    {es:'añadir', note:'regular -ir', en:'to add', ex:'Tienes que añadir sal.'},
+    {es:'cocinar', note:'regular -ar', en:'to cook', ex:'Me gusta cocinar los domingos.'},
+    {es:'hervir', note:'e→ie', en:'to boil', ex:'El agua hierve.'},
+    {es:'calentar', note:'e→ie', en:'to heat', ex:'Caliento la sopa.'},
+    {es:'hornear', note:'regular -ar', en:'to bake', ex:'Tienes que hornear el pan.'},
+    {es:'probar', note:'o→ue', en:'to taste, to try', ex:'Pruebo la salsa.'}
+  ],
+  nature: [
+    {es:'el bosque', note:'naturaleza', en:'forest', ex:'Me gusta caminar en el bosque.'},
+    {es:'la montaña', note:'naturaleza', en:'mountain', ex:'Nieva en las montañas.'},
+    {es:'el río', note:'naturaleza', en:'river', ex:'El río está cerca de mi casa.'},
+    {es:'el lago', note:'naturaleza', en:'lake', ex:'Nadamos en el lago en verano.'},
+    {es:'el glaciar', note:'naturaleza', en:'glacier', ex:'En la Patagonia hay glaciares.'},
+    {es:'el volcán', note:'naturaleza', en:'volcano', ex:'El monte Rainier es un volcán.'},
+    {es:'la lluvia', note:'naturaleza', en:'rain', ex:'No me molesta la lluvia.'},
+    {es:'la nieve', note:'naturaleza', en:'snow', ex:'Me encanta la nieve.'}
+  ]
+};
+var flipped = {};
+function buildFlash(key, containerId, extraClass){
+  var c = document.getElementById(containerId);
+  FC[key].forEach(function(v, i){
+    var card = document.createElement('div');
+    card.className = 'vocab-card' + (extraClass ? ' '+extraClass : '');
+    card.setAttribute('role','button'); card.setAttribute('tabindex','0');
+    card.setAttribute('aria-label', v.es + '. Flip to see the translation and hear the pronunciation.');
+    card.innerHTML = '<div class="vocab-card-inner"><div class="vocab-front">'+v.es+'<small>'+v.note+'</small><span class="vocab-sound" aria-hidden="true">'+SPK+'</span></div>' +
+      '<div class="vocab-back">'+v.en+'<span class="vocab-ex">'+v.ex+'</span>' +
+      '<button type="button" class="vocab-replay" aria-label="Play again: '+v.es.replace(/"/g,'&quot;')+'">'+SPK+'</button></div></div>';
+    function flip(){
+      var now = card.classList.toggle('flipped');
+      if(now){ speak([v.es, v.ex]); flipped[key+i]=true; updateCompletion(); }
+    }
+    card.addEventListener('click', flip);
+    card.addEventListener('keydown', function(e){ if(e.key==='Enter' || e.key===' '){ e.preventDefault(); flip(); } });
+    card.querySelector('.vocab-replay').addEventListener('click', function(e){ e.stopPropagation(); speak([v.es, v.ex]); });
+    c.appendChild(card);
+  });
+}
+function flashTotal(){ var n=0; for(var k in FC) n+=FC[k].length; return n; }
+function flashDone(){ return Object.keys(flipped).length; }
+
+/* ── Fill-in blanks ── */
+function checkBlanks(idsCSV, resultId){
+  var ids = idsCSV.split(','), correct = 0, total = ids.length;
+  ids.forEach(function(id){
+    var el = document.getElementById(id); if(!el) return;
+    el.classList.remove('ok','ng');
+    if(normalize(el.value) === normalize(el.getAttribute('data-answer'))){ el.classList.add('ok'); correct++; }
+    else el.classList.add('ng');
+  });
+  var msg = document.getElementById(resultId);
+  if(msg){
+    if(correct===total){ msg.textContent='¡Perfecto! '+correct+' / '+total+' correctas. ✓'; msg.className='res-msg ok'; }
+    else { msg.textContent=correct+' / '+total+' correctas. Revisa las marcadas en rojo.'; msg.className='res-msg ng'; }
+  }
+  updateCompletion();
+}
+function resetBlanks(idsCSV, resultId){
+  idsCSV.split(',').forEach(function(id){ var el=document.getElementById(id); if(el){ el.value=''; el.classList.remove('ok','ng'); } });
+  var msg=document.getElementById(resultId); if(msg){ msg.textContent=''; msg.className='res-msg'; }
+  updateCompletion();
+}
+
+/* ── Multiple-choice engine ── */
+var quizState = {}, MC_SETS = {}, MC_MSG = { place:'rs6', read:'rsRead' };
+function buildMC(data, key, containerId){
+  var container = document.getElementById(containerId); if(!container) return;
+  container.innerHTML='';
+  quizState[key] = data.map(function(){ return null; }); MC_SETS[key] = data;
+  data.forEach(function(item, i){
+    var div = document.createElement('div');
+    div.className = 'quiz-item'; div.id = key+'_item_'+i;
+    var head = '<div class="quiz-q"><span class="qnum">'+(i+1)+'.</span>'+item.q+'</div><div class="quiz-gloss">'+item.gloss+'</div>';
+    var opts = item.options.map(function(opt, j){
+      return '<button type="button" class="quiz-opt" id="'+key+'_'+i+'_'+j+'" onclick="pickMC(\''+key+'\','+i+','+j+')"><span class="letter">'+'ABCD'[j]+'</span><span>'+opt+'</span></button>';
+    }).join('');
+    div.innerHTML = head + '<div class="quiz-options">'+opts+'</div><div class="quiz-explain" id="'+key+'_exp_'+i+'"></div>';
+    container.appendChild(div);
+  });
+}
+function pickMC(key, i, j){
+  if(MC_SETS[key].instant && quizState[key][i]!==null) return;
+  quizState[key][i] = j;
+  MC_SETS[key][i].options.forEach(function(_, k){ document.getElementById(key+'_'+i+'_'+k).classList.toggle('selected', k===j); });
+  if(MC_SETS[key].instant){ revealMC(key, i); instantMsg(key); }
+  updateCompletion();
+}
+function revealMC(key, i){
+  var item = MC_SETS[key][i], chosen = quizState[key][i], ok = chosen===item.answer;
+  item.options.forEach(function(_, j){ var btn=document.getElementById(key+'_'+i+'_'+j); btn.classList.remove('is-correct','is-wrong'); if(j===item.answer) btn.classList.add('is-correct'); else if(j===chosen) btn.classList.add('is-wrong'); });
+  var exp = document.getElementById(key+'_exp_'+i); exp.className='quiz-explain show';
+  exp.innerHTML = '<strong>'+(ok?'✓ ¡Correcto!':'✗ No exactamente.')+'</strong> '+item.explain;
+  document.getElementById(key+'_item_'+i).className='quiz-item '+(ok?'correct':'wrong');
+  return ok;
+}
+function resetMC(key){
+  var data = MC_SETS[key]; quizState[key] = data.map(function(){ return null; });
+  data.forEach(function(item, i){ item.options.forEach(function(_, j){ document.getElementById(key+'_'+i+'_'+j).className='quiz-opt'; }); document.getElementById(key+'_exp_'+i).className='quiz-explain'; document.getElementById(key+'_item_'+i).className='quiz-item'; });
+}
+function mcCorrect(key){ var c=0; MC_SETS[key].forEach(function(it,i){ if(quizState[key][i]===it.answer) c++; }); return c; }
+function instantMsg(key){
+  var data=MC_SETS[key], answered = quizState[key].filter(function(x){return x!==null;}).length;
+  if(answered===data.length){ var c=mcCorrect(key); setMsg(MC_MSG[key], c===data.length, c+' / '+data.length+' correctas.'+(c===data.length?' ¡Perfecto! ✓':'')); }
+}
+
+/* Ejercicio 6 · common errors (instant feedback) */
+var placeData = [
+  { q:'"I like coffee."', gloss:'gustar is not conjugated like a regular verb', options:['Yo gusto café.','Me gusta el café.','Me gusto el café.','Yo gusta el café.'], answer:1, explain:'The coffee is pleasing <em>to me</em>: <strong>Me gusta el café</strong>. And don\'t forget the article <em>el</em>.' },
+  { q:'"We love the mountains."', gloss:'plural noun', options:['Nos encanta las montañas.','Nosotros encantamos las montañas.','Nos encantan las montañas.','Nos encantan montañas.'], answer:2, explain:'<em>Las montañas</em> is plural, so the verb is <strong>encantan</strong>, and the pronoun is <strong>nos</strong>.' },
+  { q:'"Ana likes to cook."', gloss:'a + person + le', options:['A Ana le gusta cocinar.','Ana gusta cocinar.','A Ana se gusta cocinar.','A Ana le gustan cocinar.'], answer:0, explain:'Use <em>a</em> + name and keep the pronoun <strong>le</strong>. An infinitive takes <strong>gusta</strong>.' },
+  { q:'"I have to get up early."', gloss:'tener que + reflexive infinitive', options:['Tengo levantarme temprano.','Tengo que me levanto temprano.','Tengo que levantarse temprano.','Tengo que levantarme temprano.'], answer:3, explain:'<em>Tener</em> + <strong>que</strong> + infinitive, with the pronoun attached and matching <em>yo</em>: <strong>levantarme</strong>.' },
+  { q:'"March is the third month."', gloss:'tercer before a masculine singular noun', options:['Marzo es el tercero mes.','Marzo es el tercer mes.','Marzo es el mes tercer.','Marzo es el tres mes.'], answer:1, explain:'<em>Tercero</em> drops the <em>-o</em> before a masculine singular noun: <strong>el tercer mes</strong>.' },
+  { q:'"It\'s very hot today."', gloss:'hace + noun · mucho, not muy', options:['Hoy es muy calor.','Hoy está mucho calor.','Hoy hace mucho calor.','Hoy hace muy calor.'], answer:2, explain:'Weather with a noun uses <strong>hace</strong>, and <em>calor</em> is a noun, so it takes <strong>mucho</strong>.' }
+];
+placeData.instant = true;
+
+/* Ejercicio 7 · reading (instant feedback) */
+var readData = [
+  { q:'¿Qué tiempo hace en Olympia en invierno?', gloss:'párrafo 1', options:['Hace mucho calor.','Llueve mucho.','Hace mucho viento.','Nieva todos los días.'], answer:1, explain:'«Aquí <strong>llueve mucho</strong> en otoño y en invierno».' },
+  { q:'¿Qué le interesa a Camila?', gloss:'párrafo 2', options:['Los deportes.','Los glaciares.','Los pájaros.','La cocina.'], answer:2, explain:'«A mí me interesan <strong>los pájaros</strong>».' },
+  { q:'¿Cómo es el tiempo en Monteverde?', gloss:'párrafo 2', options:['Casi siempre está nublado y hay niebla.','Casi siempre hace sol.','Nieva mucho en invierno.','Hace mucho viento.'], answer:0, explain:'Es un bosque nuboso: «casi siempre <strong>está nublado y hay niebla</strong>».' },
+  { q:'¿Cuándo es verano en la Patagonia?', gloss:'párrafo 3', options:['En junio, julio y agosto.','En marzo, abril y mayo.','En septiembre y octubre.','En diciembre, enero y febrero.'], answer:3, explain:'Las estaciones son al revés: «en <strong>diciembre, enero y febrero</strong> es verano».' },
+  { q:'¿Qué tiene que llevar Camila a la Patagonia?', gloss:'párrafo 3', options:['Un paraguas.','Una chaqueta.','Unas sandalias.','Un libro de recetas.'], answer:1, explain:'«Tengo que llevar <strong>una chaqueta</strong>, porque allí hace frío también en verano».' }
+];
+readData.instant = true;
+
+/* Juego 4 · quiz */
+var quizData = [
+  { q:'A nosotros <u>___</u> gusta la primavera.', gloss:'pronombre', options:['les','nos','se','me'], answer:1, explain:'<em>A nosotros</em> → <strong>nos</strong> gusta.' },
+  { q:'Me <u>___</u> los tacos.', gloss:'gusta / gustan', options:['gusta','gusto','gustan','gustas'], answer:2, explain:'<em>Los tacos</em> is plural: <strong>gustan</strong>.' },
+  { q:'"I love to cook." →', gloss:'encantar + infinitivo', options:['Me encanta cocinar.','Yo encanto cocinar.','Me encantan cocinar.','Me encanto cocinar.'], answer:0, explain:'Infinitive → singular: <strong>Me encanta cocinar</strong>.' },
+  { q:'A Marta <u>___</u> interesan los glaciares.', gloss:'pronombre', options:['se','la','les','le'], answer:3, explain:'<em>A Marta</em> (ella) → <strong>le</strong>.' },
+  { q:'Mañana tengo <u>___</u> trabajar.', gloss:'obligación', options:['a','que','de','para'], answer:1, explain:'<em>tener</em> <strong>que</strong> + infinitivo.' },
+  { q:'Vivo en el <u>___</u> piso. (3.º)', gloss:'ordinal', options:['tercero','tres','tercer','tercera'], answer:2, explain:'Before a masculine singular noun: <strong>tercer</strong> piso.' },
+  { q:'En la Patagonia, en enero es…', gloss:'las estaciones al revés', options:['verano','invierno','otoño','primavera'], answer:0, explain:'Southern Hemisphere: December to February is <strong>verano</strong>.' },
+  { q:'"It\'s cloudy." →', gloss:'el tiempo', options:['Hace nublado.','Hay nublado.','Es nublado.','Está nublado.'], answer:3, explain:'<em>Nublado</em> is an adjective: <strong>Está nublado</strong>.' },
+  { q:'El quinto mes del año es…', gloss:'ordinales + meses', options:['abril','mayo','junio','marzo'], answer:1, explain:'enero, febrero, marzo, abril, <strong>mayo</strong>.' },
+  { q:'En Seattle, en noviembre <u>___</u> mucho.', gloss:'el tiempo', options:['hace','está','llueve','nieva'], answer:2, explain:'<strong>Llueve</strong> mucho (llover, o→ue).' }
+];
+function checkQuiz(){
+  var correct = 0; quizData.forEach(function(_, i){ if(revealMC('quiz', i)) correct++; });
+  setMsg('rsQuiz', correct===quizData.length, correct+' / '+quizData.length+' correctas.'+(correct===quizData.length?' ¡Perfecto! ✓':' Lee cada explicación.'));
+  updateCompletion();
+}
+function resetQuiz(){ resetMC('quiz'); document.getElementById('rsQuiz').className='res-msg'; document.getElementById('rsQuiz').textContent=''; updateCompletion(); }
+
+/* ── Matching games ── */
+var MATCH = {
+  w: { cont:'matchCont', msg:'rsMatch', labels:['Español','English'], done:'¡Excelente! Emparejaste las ', noun:' expresiones. ✓', matched:0, finished:false, selA:null, selB:null, data:[
+    {a:'hace sol', b:'it\'s sunny'},
+    {a:'hace calor', b:'it\'s hot'},
+    {a:'hace frío', b:'it\'s cold'},
+    {a:'hace viento', b:'it\'s windy'},
+    {a:'llueve', b:'it\'s raining'},
+    {a:'nieva', b:'it\'s snowing'},
+    {a:'está nublado', b:'it\'s cloudy'},
+    {a:'está despejado', b:'it\'s clear'},
+    {a:'hay niebla', b:'it\'s foggy'},
+    {a:'hace buen tiempo', b:'the weather is nice'}
+  ]},
+  m: { cont:'matchCont2', msg:'rsMatch2', labels:['Ordinal','Mes'], done:'¡Excelente! Ordenaste los ', noun:' meses. ✓', matched:0, finished:false, selA:null, selB:null, data:[
+    {a:'el primer mes', b:'enero'},
+    {a:'el segundo mes', b:'febrero'},
+    {a:'el tercer mes', b:'marzo'},
+    {a:'el cuarto mes', b:'abril'},
+    {a:'el quinto mes', b:'mayo'},
+    {a:'el sexto mes', b:'junio'},
+    {a:'el séptimo mes', b:'julio'},
+    {a:'el octavo mes', b:'agosto'},
+    {a:'el noveno mes', b:'septiembre'},
+    {a:'el décimo mes', b:'octubre'}
+  ]}
+};
+function buildMatch(key){
+  var M = MATCH[key], c = document.getElementById(M.cont);
+  var order = M.data.map(function(_, i){ return i; });
+  for(var k=order.length-1;k>0;k--){ var r=Math.floor(Math.random()*(k+1)); var t=order[k]; order[k]=order[r]; order[r]=t; }
+  var aHtml = M.data.map(function(m, i){ return '<div class="mi" role="button" tabindex="0" data-side="a" data-idx="'+i+'" onclick="selMatch(\''+key+'\',this)">'+(i+1)+'. '+m.a+'</div>'; }).join('');
+  var bHtml = order.map(function(idx){ return '<div class="mi" role="button" tabindex="0" data-side="b" data-idx="'+idx+'" onclick="selMatch(\''+key+'\',this)">'+M.data[idx].b+'</div>'; }).join('');
+  c.innerHTML = '<div class="match-cols"><div><div class="match-col-label">'+M.labels[0]+'</div>'+aHtml+'</div><div><div class="match-col-label">'+M.labels[1]+'</div>'+bHtml+'</div></div>';
+  M.selA=null; M.selB=null; M.matched=0; M.finished=false;
+  document.getElementById(M.msg).textContent=''; document.getElementById(M.msg).className='res-msg';
+  updateCompletion();
+}
+function selMatch(key, el){
+  var M = MATCH[key]; if(el.classList.contains('done')) return;
+  var side = el.dataset.side;
+  document.querySelectorAll('#'+M.cont+' .mi[data-side='+side+']').forEach(function(i){ i.classList.remove('sel','bad'); });
+  el.classList.add('sel'); if(side==='a') M.selA=el; else M.selB=el;
+  if(!M.selA || !M.selB) return;
+  if(M.selA.dataset.idx === M.selB.dataset.idx){
+    M.selA.classList.remove('sel'); M.selA.classList.add('done'); M.selB.classList.remove('sel'); M.selB.classList.add('done'); M.matched++;
+    if(M.matched===M.data.length){ M.finished=true; setMsg(M.msg, true, M.done+M.matched+M.noun); }
+  } else { var bad=M.selB; bad.classList.add('bad'); setTimeout(function(){ bad.classList.remove('bad','sel'); }, 700); }
+  M.selA=null; M.selB=null; updateCompletion();
+}
+document.addEventListener('keydown', function(e){ if((e.key==='Enter'||e.key===' ') && e.target && e.target.classList && e.target.classList.contains('mi')){ e.preventDefault(); e.target.click(); } });
+
+/* ── Short answer ── */
+/* keys: every group must be satisfied; a group is satisfied by any one of its alternatives (a word or a phrase) */
+var shortData = [
+  { q:'¿Qué tiempo hace hoy?', gloss:'What\'s the weather like today?', keys:[['hace','esta','hay','llueve','nieva']], minW:2, hint:'Usa «Hace…», «Está…», «Hay…» o «Llueve».' },
+  { q:'¿Cuál es tu estación favorita y por qué?', gloss:'What is your favorite season, and why?', keys:[['primavera','verano','otono','invierno'],['porque']], minW:6, hint:'Usa una estación y «porque…».' },
+  { q:'¿Qué te gusta hacer en verano?', gloss:'What do you like to do in summer?', keys:[['me gusta','me encanta']], minW:4, hint:'Usa «Me gusta + infinitivo».' },
+  { q:'¿Qué tienes que hacer esta semana?', gloss:'What do you have to do this week?', keys:[['tengo que']], minW:4, hint:'Usa «Tengo que + infinitivo».' },
+  { q:'¿Qué comida te encanta?', gloss:'What food do you love?', keys:[['me encanta','me encantan']], minW:3, hint:'Usa «Me encanta…» o «Me encantan…».' },
+  { q:'¿En qué mes es tu cumpleaños?', gloss:'What month is your birthday in?', keys:[['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre']], minW:4, hint:'Usa «Mi cumpleaños es en…» y el mes.' }
+];
+function buildShort(){
+  var c = document.getElementById('shortCont');
+  c.innerHTML = shortData.map(function(s, i){
+    return '<div style="margin-bottom:14px;"><label for="sa'+i+'" style="display:block;font-size:0.92rem;font-weight:700;color:var(--navy);">'+(i+1)+'. '+s.q+' <span style="font-weight:400;color:var(--text-hint);font-style:italic;font-size:0.82rem;">'+s.gloss+'</span></label><input class="task-input" id="sa'+i+'" placeholder="Escribe tu respuesta…" autocomplete="off"><div class="task-fb" id="fbsa'+i+'"></div></div>';
+  }).join('');
+}
+function gradeShort(i){
+  var s = shortData[i], v = val('sa'+i), w = wordsOf(v), n = ' '+w.join(' ')+' ';
+  if(!v) return { ok:false, msg:'Escribe tu respuesta.' };
+  if(w.length < s.minW) return { ok:false, msg:'Escribe una oración completa (mínimo '+s.minW+' palabras).' };
+  for(var k=0;k<s.keys.length;k++){ var hit = s.keys[k].some(function(alt){ return n.indexOf(' '+alt+' ')!==-1; }); if(!hit) return { ok:false, msg:s.hint }; }
+  if(/ yo gusto | me gusto /.test(n)) return { ok:false, msg:'No «yo gusto»: usa «Me gusta…».' };
+  return { ok:true, msg:'¡Bien! Respuesta completa.' };
+}
+function checkShort(){
+  var correct = 0;
+  shortData.forEach(function(_, i){ var r=gradeShort(i); document.getElementById('sa'+i).style.borderBottomColor = r.ok?'var(--sage)':'var(--terracotta)'; showFb('fbsa'+i, r.ok, r.msg); if(r.ok) correct++; });
+  setMsg('rs8', correct===shortData.length, correct+' / '+shortData.length+' respuestas válidas.');
+  updateCompletion();
+}
+function resetShort(){
+  shortData.forEach(function(_, i){ var el=document.getElementById('sa'+i); el.value=''; el.style.borderBottomColor=''; clearFb('fbsa'+i); });
+  document.getElementById('rs8').className='res-msg'; document.getElementById('rs8').textContent=''; updateCompletion();
+}
+
+/* ── Tarea · Una receta (live checklist) ── */
+var ORDINALS = { primero:1, primer:1, primera:1, segundo:2, segunda:2, tercero:3, tercer:3, tercera:3, cuarto:4, cuarta:4, quinto:5, quinta:5, sexto:6, sexta:6, septimo:7, septima:7, octavo:8, octava:8, noveno:9, novena:9, decimo:10, decima:10 };
+var COOK_VERBS = ('lavar pelar cortar picar mezclar anadir agregar batir poner echar calentar hervir cocinar freir asar tostar hornear probar servir formar aplastar cerrar abrir preparar usar esperar medir amasar enfriar decorar comprar comer tapar mover sacar dejar untar rallar exprimir licuar doblar').split(' ');
+var WEATHER_WORDS = ['hace frio','hace calor','hace sol','hace fresco','hace viento','hace buen tiempo','hace mal tiempo','llueve','nieva','esta nublado','en invierno','en verano','en otono','en primavera','el invierno','el verano','el otono','la primavera'];
+function taskAnalysis(){
+  var title = val('recTitle'), ingRaw = val('recIng'), raw = val('taskText'), n = ' '+normalize(raw).replace(/[¿?¡!.,;:"()]/g,' ').replace(/\s+/g,' ')+' ', w = wordsOf(raw);
+  var ings = ingRaw.split(/[\n,;]+/).map(function(x){ return x.trim(); }).filter(function(x){ return x.length>1; });
+  var sentences = raw.split(/[.!?\n]+/).filter(function(s){ return s.trim().split(/\s+/).filter(Boolean).length>=3; }).length;
+  var ordSet = {}; w.forEach(function(x){ if(ORDINALS[x]) ordSet[ORDINALS[x]]=true; });
+  var tq = (n.match(/ (tengo|tienes|tiene|tenemos|tienen) que [a-zñ]+(ar|er|ir)(me|te|se|nos|lo|la|los|las)? /g)||[]).length;
+  var tqAll = (n.match(/ (tengo|tienes|tiene|tenemos|tienen) que (?=[a-zñ]+(ar|er|ir)(me|te|se|nos|lo|la|los|las)? )/g)||[]).length; if(tqAll>tq) tq=tqAll;
+  var cookSet = {}; w.forEach(function(x){ var base=x.replace(/(me|te|se|nos|lo|la|los|las)$/,''); if(COOK_VERBS.indexOf(x)!==-1) cookSet[x]=true; else if(COOK_VERBS.indexOf(base)!==-1) cookSet[base]=true; });
+  var gustar = / (me|te|le|nos|les) (gusta|gustan|encanta|encantan|interesa|interesan|fascina|fascinan) /.test(n);
+  var weather = WEATHER_WORDS.some(function(x){ return n.indexOf(' '+x+' ')!==-1; });
+  var errs = [];
+  if(/ yo gusto | me gusto | yo encanto /.test(n)) errs.push('«yo gusto» → me gusta');
+  if(/ (gusta|encanta|interesa) (los|las) /.test(n)) errs.push('«gusta los/las» → gustan los/las');
+  if(/ (tengo|tienes|tiene|tenemos|tienen) (?!que )[a-zñ]+(ar|er|ir) /.test(n)) errs.push('«tener + infinitivo» → tener que + infinitivo');
+  if(/ (primero|tercero) (paso|ingrediente|dia|mes|plato) /.test(n)) errs.push('«primero/tercero paso» → primer/tercer paso');
+  return { title:title, ings:ings, ingRaw:ingRaw, raw:raw, words:w.length, sentences:sentences, ords:Object.keys(ordSet).length, tq:tq, cook:Object.keys(cookSet), gustar:gustar, weather:weather, errs:errs };
+}
+function taskCriteria(){
+  var a = taskAnalysis();
+  return [
+    { label:'<b>Nombre de la receta</b>', met: a.title.length>1, txt:'nombre de la receta' },
+    { label:'<b>4+ ingredientes</b> ('+a.ings.length+')', met: a.ings.length>=4, txt:'4+ ingredientes' },
+    { label:'<b>5+ pasos</b> en oraciones completas ('+a.sentences+')', met: a.sentences>=5, txt:'5+ pasos' },
+    { label:'<b>3+ ordinales</b>: primero, segundo, tercero… ('+a.ords+')', met: a.ords>=3, txt:'3+ ordinales' },
+    { label:'<b>3+ tener que + infinitivo</b> ('+a.tq+')', met: a.tq>=3, txt:'3+ tener que + infinitivo' },
+    { label:'<b>4+ verbos de cocina</b> ('+(a.cook.slice(0,6).join(', ')||'cortar, mezclar…')+')', met: a.cook.length>=4, txt:'4+ verbos de cocina' },
+    { label:'<b>Tu opinión</b> con gustar o encantar (Me encanta…)', met: a.gustar, txt:'opinión con gustar / encantar' },
+    { label:'<b>El tiempo o la estación</b> (en invierno, cuando hace frío…)', met: a.weather, txt:'el tiempo o la estación' },
+    { label:'<b>Sin errores comunes</b> (no <em>yo gusto</em>, no <em>tengo cocinar</em>…)', met: a.words>0 && a.errs.length===0, txt:'sin errores comunes' }
+  ];
+}
+var taskChecked = false;
+function renderTask(){
+  var a = taskAnalysis(), crit = taskCriteria();
+  document.getElementById('taskWc').textContent = a.ings.length+' ingredientes · '+a.sentences+' oraciones · '+a.words+' palabras';
+  document.getElementById('taskChecklist').innerHTML = crit.map(function(c){ return '<li class="'+(c.met?'met':'')+'">'+c.label+'</li>'; }).join('');
+}
+function checkTask(){
+  var a = taskAnalysis(), crit = taskCriteria(), met = crit.filter(function(c){return c.met;}).length;
+  taskChecked = true; renderTask();
+  if(!a.raw){ setMsg('rsTask', false, 'Escribe los pasos de tu receta primero.'); updateCompletion(); return; }
+  var msg = met+' / '+crit.length+' criterios cumplidos.';
+  if(a.errs.length) msg += ' Revisa: '+a.errs.join('; ')+'.';
+  if(met===crit.length) msg += ' ¡Excelente! Tu receta está lista para entregar. ✓';
+  setMsg('rsTask', met===crit.length, msg); updateCompletion();
+}
+function resetTask(){ ['recTitle','recIng','taskText'].forEach(function(id){ document.getElementById(id).value=''; }); taskChecked=false; renderTask(); document.getElementById('rsTask').className='res-msg'; document.getElementById('rsTask').textContent=''; updateCompletion(); }
+
+/* ── Speed challenge ── */
+var gameData = [
+  {p:'Me ___ el verano.', a:'gusta', o:['gusta','gustan','gusto'], h:'gusta or gustan?'},
+  {p:'Nos ___ las montañas.', a:'encantan', o:['encantan','encanta','encantamos'], h:'singular or plural?'},
+  {p:'¿Te ___ los deportes?', a:'interesan', o:['interesan','interesa','interesas'], h:'singular or plural?'},
+  {p:'A ella ___ gusta cocinar.', a:'le', o:['le','la','se'], h:'which pronoun?'},
+  {p:'A mis amigos ___ encanta el fútbol.', a:'les', o:['les','le','los'], h:'which pronoun?'},
+  {p:'Yo ___ que trabajar.', a:'tengo', o:['tengo','tiene','tener'], h:'tener que'},
+  {p:'Nosotros ___ que estudiar.', a:'tenemos', o:['tenemos','tienemos','tienen'], h:'tener que'},
+  {p:'Enero es el ___ mes.', a:'primer', o:['primer','primero','primera'], h:'1.º'},
+  {p:'Es la ___ semana.', a:'tercera', o:['tercera','tercer','tercero'], h:'3.ª'},
+  {p:'Hoy ___ sol.', a:'hace', o:['hace','está','es'], h:'el tiempo'},
+  {p:'Hoy ___ nublado.', a:'está', o:['está','hace','hay'], h:'el tiempo'},
+  {p:'Me ___ nadar y correr.', a:'gusta', o:['gusta','gustan','gustamos'], h:'two infinitives'}
+];
+var gIdx=0, gScore=0, gStreak=0, gFinished=false, gLock=false;
+function startGame(){
+  gIdx=0; gScore=0; gStreak=0; gFinished=false; gLock=false;
+  document.getElementById('gScore').textContent='0'; document.getElementById('gStreak').textContent='0';
+  document.getElementById('gFb').textContent=''; document.getElementById('gFb').className='game-feedback';
+  showGameQ(); updateCompletion();
+}
+function showGameQ(){
+  var q = gameData[gIdx];
+  document.getElementById('gNum').textContent = (gIdx+1)+'/'+gameData.length;
+  document.getElementById('gPrompt').textContent = q.p;
+  document.getElementById('gSub').textContent = 'Choose the missing word ('+q.h+').';
+  var opts = q.o.slice();
+  for(var k=opts.length-1;k>0;k--){ var r=Math.floor(Math.random()*(k+1)); var t=opts[k]; opts[k]=opts[r]; opts[r]=t; }
+  document.getElementById('gOpts').innerHTML = opts.map(function(o){ return '<button type="button" class="game-opt" onclick="pickGame(this,\''+o.replace(/'/g,"\\'")+'\')">'+o+'</button>'; }).join('');
+  gLock=false;
+}
+function pickGame(el, choice){
+  if(gLock) return; gLock=true;
+  var q = gameData[gIdx], fb = document.getElementById('gFb'), full = q.p.replace('___', q.a);
+  var ok = normalize(choice) === normalize(q.a);
+  document.querySelectorAll('#gOpts .game-opt').forEach(function(b){ if(normalize(b.textContent)===normalize(q.a)) b.classList.add('is-correct'); });
+  if(ok){ gScore++; gStreak++; fb.textContent='✓ ¡Correcto! '+full; fb.className='game-feedback ok'; }
+  else { gStreak=0; el.classList.add('is-wrong'); fb.textContent='✗ '+full; fb.className='game-feedback ng'; }
+  document.getElementById('gScore').textContent=gScore; document.getElementById('gStreak').textContent=gStreak;
+  setTimeout(function(){
+    gIdx++;
+    if(gIdx < gameData.length){ showGameQ(); }
+    else { gFinished=true; document.getElementById('gPrompt').innerHTML='<span class="game-done">¡Fin! '+gScore+' / '+gameData.length+'</span>'; document.getElementById('gSub').textContent = gScore===gameData.length?'¡Perfecto! Dominas el capítulo 5.2.':'Pulsa "Restart Game" para intentarlo de nuevo.'; document.getElementById('gOpts').innerHTML=''; document.getElementById('gNum').textContent=gameData.length+'/'+gameData.length; }
+    updateCompletion();
+  }, 1100);
+}
+
+/* ── Completion meter ── */
+var BLANK_SETS = [['e1_',8,'Ej 1 · pronombres'],['e2_',8,'Ej 2 · gusta / gustan'],['e3_',6,'Ej 3 · tener que'],['e4_',8,'Ej 4 · ordinales'],['e5_',8,'Ej 5 · el tiempo y las estaciones']];
+function idsFilled(prefix, n){ var out=[]; for(var i=1;i<=n;i++) out.push(val(prefix+i).length>0); return out; }
+var completionGroups = [
+  { label:'Nombre', tab:'ov', items:function(){ return [val('studentName').length>0]; } },
+  { label:'Vocabulario', tab:'vo', items:function(){ var a=[]; for(var i=0;i<flashTotal();i++) a.push(i<flashDone()); return a; } },
+  { label:'Ejercicios', tab:'ej', items:function(){
+      var a=[]; BLANK_SETS.forEach(function(b){ a=a.concat(idsFilled(b[0],b[1])); });
+      return a.concat(placeData.map(function(_, i){ return quizState['place'][i]!==null; }), readData.map(function(_, i){ return quizState['read'][i]!==null; }), shortData.map(function(_, i){ return val('sa'+i).length>0; })); } },
+  { label:'Tarea', tab:'ta', items:function(){ return [val('recTitle').length>0, val('recIng').length>0, val('taskText').length>0, taskChecked]; } },
+  { label:'Juegos', tab:'ju', items:function(){ return [MATCH.w.finished, MATCH.m.finished, gFinished].concat(quizData.map(function(_, i){ return quizState['quiz'][i]!==null; })); } }
+];
+function completionStats(){ return completionGroups.map(function(g){ var a=g.items(); return { label:g.label, tab:g.tab, done:a.filter(Boolean).length, total:a.length }; }); }
+
+/* ── Live score ── */
+function blanksCorrect(prefix, n){ var c=0; for(var i=1;i<=n;i++){ var el=document.getElementById(prefix+i); if(el && el.value.trim() && normalize(el.value)===normalize(el.getAttribute('data-answer'))) c++; } return c; }
+function computeScore(){
+  var correct=0, total=0;
+  BLANK_SETS.forEach(function(b){ correct+=blanksCorrect(b[0],b[1]); total+=b[1]; });
+  correct += mcCorrect('place'); total += placeData.length;
+  correct += mcCorrect('read'); total += readData.length;
+  shortData.forEach(function(_, i){ if(val('sa'+i) && gradeShort(i).ok) correct++; }); total += shortData.length;
+  var crit = taskCriteria(); correct += crit.filter(function(c){return c.met;}).length; total += crit.length;
+  correct += MATCH.w.matched + MATCH.m.matched; total += MATCH.w.data.length + MATCH.m.data.length;
+  correct += mcCorrect('quiz'); total += quizData.length;
+  correct += gScore; total += gameData.length;
+  return { correct:correct, total:total };
+}
+function updateScore(){ var s=computeScore(); var pct=s.total?Math.round(s.correct/s.total*100):0; var el=document.getElementById('completionScore'); if(el) el.textContent='★ '+pct+'% correcto'; }
+var READY = false;
+function updateCompletion(){
+  if(!READY) return;
+  var stats = completionStats(), d=0, t=0;
+  stats.forEach(function(g){ d+=g.done; t+=g.total; });
+  var pct = t ? Math.round(d/t*100) : 0;
+  document.getElementById('completionPct').textContent = pct+'%';
+  document.getElementById('pf').style.width = pct+'%';
+  document.getElementById('completionLegend').innerHTML = stats.map(function(g){ return '<button type="button" class="legend-pill '+(g.done===g.total?'done':'')+'" onclick="jumpTab(\''+g.tab+'\')">'+g.label+' '+g.done+'/'+g.total+'</button>'; }).join('');
+  updateScore();
+}
+function jumpTab(tab){ var btns=document.querySelectorAll('.tab'); for(var i=0;i<btns.length;i++){ if((btns[i].getAttribute('onclick')||'').indexOf("'"+tab+"'")!==-1){ switchTab(tab, btns[i]); return; } } switchTab(tab, null); }
+document.addEventListener('input', function(e){ if(e.target && /^(taskText|recIng|recTitle)$/.test(e.target.id)) renderTask(); updateCompletion(); });
+document.addEventListener('change', updateCompletion);
+
+/* ── Student report ── */
+function escapeHtml(str){ return (str==null?'':String(str)).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
+function stripTags(html){ var dv=document.createElement('div'); dv.innerHTML=html||''; return (dv.textContent||'').replace(/\s+/g,' ').trim(); }
+function reportTable(title, scoreText, groups){
+  var blocks = groups.map(function(g){
+    var rows = g.items.map(function(it){ return '<tr class="'+(it.value?(it.ok?'ok':'bad'):'blank')+'"><td class="num">'+escapeHtml(it.label)+'</td><td>'+(it.value?escapeHtml(it.value):'<span class="blanktxt">(en blanco)</span>')+'</td><td class="note">'+escapeHtml(it.msg||'')+'</td><td class="mark">'+(it.value?(it.ok?'✓':'✗'):'·')+'</td></tr>'; }).join('');
+    return '<h3>'+escapeHtml(g.heading)+'</h3><table><tbody>'+rows+'</tbody></table>';
+  }).join('');
+  return (title?'<h2>'+escapeHtml(title)+'<span class="score">'+escapeHtml(scoreText)+'</span></h2>':'')+blocks;
+}
+function collectBlanks(prefix, n, heading){
+  var items=[], correct=0;
+  for(var i=1;i<=n;i++){ var el=document.getElementById(prefix+i); if(!el) continue; var v=(el.value||'').trim(), expected=el.getAttribute('data-answer')||''; var ok=normalize(v)===normalize(expected); if(ok) correct++; items.push({ label:String(i), value:v, ok:ok, msg: ok?'Correcto.':'Respuesta: '+expected }); }
+  return { heading:heading, items:items, correct:correct, total:items.length };
+}
+function mcItemsFor(key, data){ return data.map(function(item, i){ var ch=quizState[key][i]; return { label:String(i+1), value: ch===null?'':stripTags(item.options[ch]), ok: ch===item.answer, msg: ch===item.answer?'Correcto.':'Correcta: '+stripTags(item.options[item.answer]) }; }); }
+function buildReportHtml(name){
+  var stamp = new Date().toLocaleString('en-US',{ year:'numeric', month:'long', day:'numeric', hour:'2-digit', minute:'2-digit' });
+  var blanks = BLANK_SETS.map(function(b){ return collectBlanks(b[0], b[1], b[2]); });
+  var blankCorrect=0, blankTotal=0; blanks.forEach(function(g){ blankCorrect+=g.correct; blankTotal+=g.total; });
+  var placeItems = mcItemsFor('place', placeData), placeCorrect = placeItems.filter(function(x){return x.ok;}).length;
+  var readItems = mcItemsFor('read', readData), readCorrect = readItems.filter(function(x){return x.ok;}).length;
+  var saItems = shortData.map(function(s, i){ var v=val('sa'+i), r=gradeShort(i); return { label:s.q, value:v, ok:r.ok, msg:r.msg }; });
+  var saCorrect = saItems.filter(function(x){ return x.ok; }).length;
+  var crit = taskCriteria(), critMet = crit.filter(function(c){return c.met;}).length, a = taskAnalysis();
+  var critItems = crit.map(function(c){ return { label:'Criterio', value:c.txt, ok:c.met, msg:c.met?'Cumplido.':'Falta.' }; });
+  var mcItems = mcItemsFor('quiz', quizData), mcC = mcItems.filter(function(x){return x.ok;}).length;
+  var matchItems = ['w','m'].map(function(k){ var M=MATCH[k]; return { label: k==='w'?'Juego 1 · El tiempo':'Juego 2 · Los meses en orden', value: M.matched+' / '+M.data.length, ok: M.finished, msg: M.finished?'Completado.':'Sin terminar.' }; });
+  var gameItem = [{ label:'Juego 3 · Reto rápido', value: gFinished?(gScore+' / '+gameData.length):'', ok: gFinished && gScore>=10, msg: gFinished?(gScore>=10?'¡Bien dominado!':'Practica un poco más.'):'Sin terminar.' }];
+  var s = computeScore(), scorePct = s.total?Math.round(s.correct/s.total*100):0;
+  var stats = completionStats(), cd=0, ct=0; stats.forEach(function(g){ cd+=g.done; ct+=g.total; });
+  var cpct = ct?Math.round(cd/ct*100):0;
+  var compRows = stats.map(function(g){ return '<li class="'+(g.done===g.total?'checked':'')+'">'+(g.done===g.total?'☑':'☐')+' '+escapeHtml(g.label)+' · '+g.done+' / '+g.total+'</li>'; }).join('');
+  var blank = '<p class="blanktxt">(en blanco)</p>';
+  var recipe = '<h3>Nombre</h3>'+(a.title?'<div class="para"><strong>'+escapeHtml(a.title)+'</strong></div>':blank)+
+    '<h3>Ingredientes</h3>'+(a.ings.length?'<div class="para">'+a.ings.map(escapeHtml).join('<br>')+'</div>':blank)+
+    '<h3>Pasos y opinión</h3>'+(a.raw?'<div class="para">'+escapeHtml(a.raw).replace(/\n/g,'<br>')+'</div>':blank);
+
+  return '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>Semana 3 · Reporte · '+escapeHtml(name)+'</title><style>'+
+  "body{font-family:Georgia,'Times New Roman',serif;color:#2A2118;max-width:850px;margin:0 auto;padding:40px 32px;line-height:1.6;}"+
+  'header{border-bottom:4px solid #C45D3A;padding-bottom:16px;margin-bottom:28px;}'+
+  'h1{font-size:1.6rem;color:#1B2A4A;margin:0 0 6px;}'+
+  ".meta{font-family:'Courier New',monospace;font-size:0.78rem;color:#6B5D4A;} .meta strong{color:#1B2A4A;}"+
+  '.summary{background:#FBF5EA;border-left:5px solid #D4A24C;padding:14px 18px;margin-bottom:28px;font-size:0.95rem;}'+
+  'h2{font-size:1.1rem;color:#1B2A4A;margin:32px 0 10px;border-left:5px solid #C45D3A;padding-left:12px;}'+
+  "h3{font-size:0.78rem;font-family:'Courier New',monospace;text-transform:uppercase;letter-spacing:0.06em;color:#6B5D4A;margin:18px 0 6px;font-weight:normal;}"+
+  ".score{font-family:'Courier New',monospace;font-size:0.72rem;font-weight:normal;color:#6B5D4A;display:block;padding-top:2px;}"+
+  'table{width:100%;border-collapse:collapse;font-size:0.86rem;margin-bottom:8px;}'+
+  'td{padding:8px 10px;border-bottom:1px solid #EDE2CE;vertical-align:top;}'+
+  "td.num{color:#6B5D4A;font-family:'Courier New',monospace;font-size:0.75rem;}"+
+  'td.note{font-size:0.78rem;color:#6B5D4A;font-style:italic;} td.mark{text-align:center;font-weight:bold;width:26px;}'+
+  'tr.ok{background:#F2F8EE;} tr.ok td.mark{color:#4C7A3C;} tr.bad{background:#FCF0EE;} tr.bad td.mark{color:#A8452A;}'+
+  '.para{background:#fff;border:1px solid #EDE2CE;border-radius:6px;padding:14px 18px;font-size:0.95rem;line-height:1.7;}'+
+  '.blanktxt{color:#A89A88;} ul.check{list-style:none;padding:0;font-size:0.9rem;} ul.check li{padding:5px 0;border-bottom:1px solid #F2EADB;} ul.check li.checked{color:#4C7A3C;}'+
+  "footer{margin-top:40px;border-top:1px solid #EDE2CE;padding-top:12px;font-family:'Courier New',monospace;font-size:0.68rem;color:#6B5D4A;}"+
+  '@media print{body{padding:0;}h2{page-break-after:avoid;}table{page-break-inside:avoid;}}'+
+  '</style></head><body>'+
+  '<header><h1>Spanish 122 · Semana 3 · Capítulo 5.2 · Imágenes (2)</h1><p class="meta"><strong>Estudiante:</strong> '+escapeHtml(name)+' &nbsp;·&nbsp; <strong>Gustos, obligaciones y el tiempo</strong> &nbsp;·&nbsp; Generado: '+escapeHtml(stamp)+'</p></header>'+
+  '<div class="summary"><strong>Puntuación:</strong> '+s.correct+' / '+s.total+' correctas (<strong>'+scorePct+'%</strong>) · Página completada al <strong>'+cpct+'%</strong> ('+cd+' / '+ct+' elementos)</div>'+
+  '<h2>Progreso por sección</h2><ul class="check">'+compRows+'</ul>'+
+  reportTable('Ejercicios 1 a 5 (fill-in)', blankCorrect+' / '+blankTotal+' correctas', blanks)+
+  reportTable('Ejercicio 6 · Errores comunes', placeCorrect+' / '+placeItems.length+' correctas', [{ heading:'¿Cuál es correcta?', items:placeItems }])+
+  reportTable('Ejercicio 7 · Lectura', readCorrect+' / '+readItems.length+' correctas', [{ heading:'A Camila le encanta la naturaleza', items:readItems }])+
+  reportTable('Ejercicio 8 · Respuesta corta', saCorrect+' / '+saItems.length+' válidas', [{ heading:'Sobre ti', items:saItems }])+
+  '<h2>Tarea · Una receta<span class="score">'+critMet+' / '+crit.length+' criterios · '+a.ings.length+' ingredientes · '+a.sentences+' oraciones · '+a.words+' palabras</span></h2>'+recipe+
+  reportTable('', '', [{ heading:'Checklist', items:critItems }])+
+  reportTable('Juegos', mcC+' / '+mcItems.length+' en el quiz', [{ heading:'Emparejamiento y reto', items:matchItems.concat(gameItem) }, { heading:'Juego 4 · Opción múltiple', items:mcItems }])+
+  '<footer>South Puget Sound Community College · ESP 122 · Semana 3 · Para entregar como PDF, abre este archivo e imprime y elige Guardar como PDF.</footer></body></html>';
+}
+function downloadReport(){
+  var field=document.getElementById('studentName'), name=(field.value||'').trim();
+  if(!name){ field.focus(); field.style.borderColor='#A8452A'; field.placeholder='Escribe tu nombre primero · Please enter your name'; setTimeout(function(){ field.style.borderColor=''; },2500); return; }
+  var html=buildReportHtml(name); var safe=name.replace(/[^a-z0-9]+/gi,'_').replace(/^_+|_+$/g,'')||'estudiante';
+  var blob=new Blob([html],{type:'text/html;charset=utf-8'}); var url=URL.createObjectURL(blob);
+  var a=document.createElement('a'); a.href=url; a.download='Semana3_Cap5-2_'+safe+'.html'; document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  setTimeout(function(){ URL.revokeObjectURL(url); },1000);
+}
+
+/* ── Build everything ── */
+buildFlash('weather','fcWeather','time-card');
+buildFlash('months','fcMonths','sport-card');
+buildFlash('gustar','fcGustar','');
+buildFlash('ord','fcOrd','conn-card');
+buildFlash('cook','fcCook','');
+buildFlash('nature','fcNature','nat-card');
+buildMC(placeData, 'place', 'placeCont');
+buildMC(readData, 'read', 'readCont');
+buildMC(quizData, 'quiz', 'quizCont');
+buildMatch('w');
+buildMatch('m');
+buildShort();
+renderTask();
+READY = true;
+startGame();
+updateCompletion();
+
+</script>
+</body>
+</html>
